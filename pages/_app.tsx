@@ -7,12 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Portfolio of Daniel Goergens</title>
-        <link
-          rel="icon"
-          type="image/icon"
-          sizes="16x16"
-          href="../public/D.svg"
-        />
+        <link rel="icon" type="image/icon" sizes="16x16" href="/D.svg" />
         <meta
           name="description"
           content="Webdev portfolio of Daniel Goergens"
