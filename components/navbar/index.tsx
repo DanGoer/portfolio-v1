@@ -10,12 +10,20 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="px-6 relative flex flex-row items-center justify-between h-20 bg-cyan-900/50 ">
-      <div className="text-xl">Logo</div>
-      <ul className="hidden">
+    <header className="z-30 w-screen py-8 px-6 sticky flex flex-col items-center justify-between bg-cyan-900/50">
+      <span className=" flex flex-row justify-between md:justify-center items-center w-full ">
+        <div className="text-xl md:absolute md:left-6 ">Logo</div>
+        <ul className="text-lg hidden md:flex md:flex-row gap-10 items-center">
+          <NavBarLinks />
+        </ul>
+        <HamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
+      </span>
+      <ul
+        className={`overflow-hidden   ease-in-out  flex flex-col gap-6 items-center transition-all duration-1000   	   
+				${isOpen ? "h-64 " : "h-0  "}`}
+      >
         <NavBarLinks />
       </ul>
-      <HamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 }
