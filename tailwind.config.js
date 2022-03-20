@@ -4,7 +4,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero: "url('/bg-mountain.jpg')",
+      },
+    },
+  },
+  fontFamily: {
+    rob: ["Roboto", "sans-serif"],
   },
   plugins: [],
 };
