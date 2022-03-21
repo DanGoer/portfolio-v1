@@ -1,50 +1,46 @@
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 function LangDropDown() {
+  const router = useRouter();
+  const [dropDown, setDropDown] = useState(false);
+  const { t } = useTranslation("common");
+
   return (
     <>
-      <button
-        id="dropdownSmallButton"
-        data-dropdown-toggle="dropdownSmall"
-        className="inline-flex items-center py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg md:mb-0 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        type="button"
-      >
-        Small dropdown{" "}
-        <svg
-          className="ml-2 w-3 h-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-      <div
-        id="dropdownSmall"
-        className="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-      >
-        <ul className="py-1" aria-labelledby="dropdownSmallButton">
-          <li>
-            <a
-              href="#"
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+      <div className="p-10">
+        <div className="dropdown inline-block relative transition-all duration-500 ">
+          <button className="bg-gray-300/0 text-white border-white border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32">
+            <span className="mr-1">Sprache</span>
+            <svg
+              className="fill-current h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              Settings
-            </a>
-          </li>
-        </ul>
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+            </svg>
+          </button>
+          <ul className="dropdown-menu absolute hidden  text-gray-700 pt-1 transition-all duration-500">
+            <li className="">
+              <Link passHref href="/" locale="en">
+                <button className="rounded-t bg-black/90 hover:bg-white hover:text-black text-white border-white border-2 py-2 px-4 w-32 flex justify-center transition-all duration-500 ">
+                  {" "}
+                  English
+                </button>
+              </Link>
+            </li>
+            <li className="">
+              <Link passHref href="/" locale="de">
+                <button className="rounded-b bg-black/90 hover:bg-white hover:text-black text-white border-white border-2 border-t-0 py-2 px-4 w-32 flex justify-center transition-all duration-500 ">
+                  Deutsch
+                </button>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
