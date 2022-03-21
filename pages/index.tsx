@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+
 import Hero from "../components/hero";
 import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
   return (
@@ -16,5 +16,11 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export const getStaticProps = async () => ({
+  props: {
+    ...(await serverSideTranslations("de", ["common", "footer"])),
+  },
+});
 
 export default Home;
