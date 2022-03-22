@@ -1,5 +1,27 @@
 import { SocialIconsI, TechItemsI } from "../types/interfaces";
 
+export const navLinks = [
+  "/",
+  "/#tech",
+  "/#projects",
+  "/#contact",
+  "/#impressum",
+];
+
+export const techIcons = [
+  { name: "HTML5", svg: "html5.svg" },
+  { name: "CSS3", svg: "css3.svg" },
+  { name: "JavaScript", svg: "javascript.svg" },
+  { name: "TypeScript", svg: "typescript.svg" },
+  { name: "React", svg: "react.svg" },
+  { name: "Node.js", svg: "nodejs.svg" },
+  { name: "Next.js", svg: "nextjs.svg" },
+  { name: "TailwindCSS", svg: "tailwindcss.svg" },
+  { name: "Material-UI", svg: "material-ui.svg" },
+  { name: "MongoDB", svg: "mongodb.svg" },
+  { name: "Firebase", svg: "firebase.svg" },
+];
+
 export const socialIconsList: SocialIconsI[] = [
   {
     name: "LinkedIn",

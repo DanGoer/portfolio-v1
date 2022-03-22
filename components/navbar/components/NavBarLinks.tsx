@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next";
-import { navBarItems } from "../../../assets/data";
 import NavBarLink from "./NavBarLink";
 
 function NavBarLinks() {
@@ -8,8 +7,8 @@ function NavBarLinks() {
     <>
       {t("navbar-links", { joinArrays: "+" })
         .split("+")
-        .map((item) => {
-          return <NavBarLink key={item} name={item} />;
+        .map((item, index) => {
+          return <NavBarLink idx={index} key={item} name={item} />;
         })}
     </>
   );

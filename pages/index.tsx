@@ -6,6 +6,7 @@ import Tech from "../components/tech";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Projects from "../components/projects";
 
 const Home: NextPage = (props) => {
   const router = useRouter();
@@ -13,8 +14,11 @@ const Home: NextPage = (props) => {
     <>
       <NavBar />
       <main>
-        <Hero />
-        <Tech />
+        <div className=" bg-fixed bg-center bg-cover bg-hero w-screen  flex flex-col items-center justify-start py-48 gap-2 text-center">
+          <Hero />
+          <Tech />
+        </div>
+        <Projects />
       </main>
     </>
   );
