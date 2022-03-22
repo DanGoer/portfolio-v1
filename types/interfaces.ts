@@ -14,3 +14,10 @@ export interface TechItemsI {
   svg: React.ReactNode;
 }
 [];
+
+export interface SocialIconsI {
+  name: string;
+  viewBox: string;
+  svg: string;
+}
+[];

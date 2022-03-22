@@ -1,12 +1,16 @@
+import { useTranslation } from "next-i18next";
 import { navBarItems } from "../../../assets/data";
 import NavBarLink from "./NavBarLink";
 
 function NavBarLinks() {
+  const { t } = useTranslation("navbar");
   return (
     <>
-      {navBarItems.map((item) => {
-        return <NavBarLink key={item} name={item} />;
-      })}
+      {t("navbar-links", { joinArrays: "+" })
+        .split("+")
+        .map((item) => {
+          return <NavBarLink key={item} name={item} />;
+        })}
     </>
   );
 }

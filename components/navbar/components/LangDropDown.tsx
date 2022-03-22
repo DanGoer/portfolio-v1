@@ -7,14 +7,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 function LangDropDown() {
   const router = useRouter();
   const [dropDown, setDropDown] = useState(false);
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("navbar");
 
   return (
     <>
       <div className="p-10">
         <div className="dropdown inline-block relative transition-all duration-500 ">
           <button className="bg-gray-300/0 text-white border-white border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32">
-            <span className="mr-1">Sprache</span>
+            <span className="mr-1">{t("language-dropdown")}</span>
             <svg
               className="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
