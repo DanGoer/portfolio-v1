@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 
-function WelcomeText() {
+function HeroWelcomeText() {
   const { t } = useTranslation("hero");
   return (
     <>
@@ -12,4 +12,4 @@ function WelcomeText() {
   );
 }
 
-export default WelcomeText;
+export default HeroWelcomeText;

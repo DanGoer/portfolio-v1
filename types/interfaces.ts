@@ -21,3 +21,12 @@ export interface SocialIconsI {
   svg: string;
 }
 [];
+
+export interface projectContentI {
+  name: string;
+  preview: string;
+  livelink: string;
+  github: string;
+  techstack: { name: string; svg: string }[];
+}
+[];

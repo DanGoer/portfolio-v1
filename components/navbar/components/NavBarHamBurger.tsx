@@ -1,6 +1,6 @@
 import { BurgerProps } from "../../../types/interfaces";
 
-function HamBurger({ isOpen, setIsOpen }: BurgerProps) {
+function NavBarHamBurger({ isOpen, setIsOpen }: BurgerProps) {
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
   return (
     <button
@@ -30,4 +30,4 @@ function HamBurger({ isOpen, setIsOpen }: BurgerProps) {
   );
 }
 
-export default HamBurger;
+export default NavBarHamBurger;

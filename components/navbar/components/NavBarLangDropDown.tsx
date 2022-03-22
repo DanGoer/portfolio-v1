@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-function LangDropDown() {
+function NavBarLangDropDown() {
   const router = useRouter();
   const [dropDown, setDropDown] = useState(false);
   const { t } = useTranslation("navbar");
@@ -46,4 +46,4 @@ function LangDropDown() {
   );
 }
 
-export default LangDropDown;
+export default NavBarLangDropDown;

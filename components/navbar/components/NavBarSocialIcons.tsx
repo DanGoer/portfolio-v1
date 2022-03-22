@@ -1,6 +1,6 @@
 import { socialIconsList } from "../../../assets/data";
 
-function SocialIcons() {
+function NavBarSocialIcons() {
   return (
     <span className="flex flex-row gap-6">
       {socialIconsList.map((icon) => {
@@ -21,4 +21,4 @@ function SocialIcons() {
   );
 }
 
-export default SocialIcons;
+export default NavBarSocialIcons;
