@@ -14,6 +14,8 @@ import NavBarHamBurger from "./components/NavBarHamBurger";
 function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  //todo:togglenav
+
   return (
     <header className="z-30 w-screen py-0 px-6 fixed flex flex-col items-center justify-between bg-cyan-900/50">
       <span className=" flex flex-row justify-between items-center w-full ">

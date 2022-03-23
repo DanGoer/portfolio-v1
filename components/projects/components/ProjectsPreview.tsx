@@ -3,7 +3,7 @@ import React from "react";
 
 function ProjectsPreview({ preview }: any) {
   return (
-    <div className="w-screen p-2">
+    <div className="w-screen md:w-1/2 p-4 hover:p-2 transition-all duration-500">
       <Image
         src={`/projects/${preview}`}
         alt="project-preview"

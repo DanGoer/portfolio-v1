@@ -7,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Projects from "../components/projects";
+import Contact from "../components/contact";
 
 const Home: NextPage = (props) => {
   const router = useRouter();
@@ -18,6 +19,7 @@ const Home: NextPage = (props) => {
           <Hero />
           <Tech />
           <Projects />
+          <Contact />
         </div>
       </main>
     </>
