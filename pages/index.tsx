@@ -17,8 +17,8 @@ const Home: NextPage = (props) => {
         <div className=" bg-fixed bg-center bg-cover bg-hero w-screen  flex flex-col items-center justify-start py-48 gap-2 text-center">
           <Hero />
           <Tech />
+          <Projects />
         </div>
-        <Projects />
       </main>
     </>
   );

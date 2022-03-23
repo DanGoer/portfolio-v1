@@ -42,8 +42,24 @@ export const socialIconsList: SocialIconsI[] = [
 
 export const projectContent: projectContentI[] = [
   {
-    name: "Firebase Auth Darkmode",
-    preview: "/portrait.jpg",
+    title: "Firebase Auth Darkmode",
+    preview: "portfolio-preview.PNG",
+    livelink: "https://github.com/DanGoer/firebase-auth-context-darkmode",
+    github: "https://github.com/DanGoer/firebase-auth-context-darkmode",
+    techstack: [
+      { name: "TypeScript", svg: "typescript.svg" },
+      { name: "React", svg: "react.svg" },
+      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Firebase", svg: "firebase.svg" },
+      { name: "TypeScript", svg: "typescript.svg" },
+      { name: "React", svg: "react.svg" },
+      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Firebase", svg: "firebase.svg" },
+    ],
+  },
+  {
+    title: "Firebase Auth Darkmode",
+    preview: "portfolio-preview.PNG",
     livelink: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     github: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     techstack: [
@@ -54,8 +70,8 @@ export const projectContent: projectContentI[] = [
     ],
   },
   {
-    name: "Firebase Auth Darkmode",
-    preview: "/portrait.jpg",
+    title: "Firebase Auth Darkmode",
+    preview: "portfolio-preview.PNG",
     livelink: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     github: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     techstack: [
@@ -66,20 +82,8 @@ export const projectContent: projectContentI[] = [
     ],
   },
   {
-    name: "Firebase Auth Darkmode",
-    preview: "/portrait.jpg",
-    livelink: "https://github.com/DanGoer/firebase-auth-context-darkmode",
-    github: "https://github.com/DanGoer/firebase-auth-context-darkmode",
-    techstack: [
-      { name: "TypeScript", svg: "typescript.svg" },
-      { name: "React", svg: "react.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
-      { name: "Firebase", svg: "firebase.svg" },
-    ],
-  },
-  {
-    name: "Firebase Auth Darkmode",
-    preview: "/portrait.jpg",
+    title: "Firebase Auth Darkmode",
+    preview: "portfolio-preview.PNG",
     livelink: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     github: "https://github.com/DanGoer/firebase-auth-context-darkmode",
     techstack: [

@@ -1,7 +1,7 @@
 import React from "react";
 
-function ProjectsInfo() {
-  return <div>ProjectsInfo</div>;
+function ProjectsInfo({ text }: any) {
+  return <p className="py-2 px-2 text-lg">{text}</p>;
 }
 
 export default ProjectsInfo;

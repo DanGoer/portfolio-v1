@@ -23,7 +23,7 @@ export interface SocialIconsI {
 [];
 
 export interface projectContentI {
-  name: string;
+  title: string;
   preview: string;
   livelink: string;
   github: string;
