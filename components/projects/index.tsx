@@ -19,11 +19,13 @@ function Projects() {
         .map((text, index) => {
           return (
             <div
-              className="flex flex-col md:flex-row gap-6 w-screen bg-slate-300/95 shadow-lg "
+              className={`flex flex-col ${
+                index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
+              } gap-6 w-screen bg-slate-300/95 shadow-lg`}
               key={index}
             >
               <ProjectsPreview preview={projectContent[index].preview} />
-              <div className="flex flex-col justify-between md:w-1/2 py-4 ">
+              <div className="flex flex-col justify-between lg:w-1/2 py-4 ">
                 <ProjectsTitle
                   livelink={projectContent[index].livelink}
                   title={projectContent[index].title}

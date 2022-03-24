@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
-
 import Hero from "../components/hero";
 import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
+import Impressum from "../components/impressum";
 
 const Home: NextPage = (props) => {
   const router = useRouter();
@@ -20,6 +19,7 @@ const Home: NextPage = (props) => {
           <Tech />
           <Projects />
           <Contact />
+          <Impressum />
         </div>
       </main>
     </>
@@ -33,6 +33,7 @@ export const getStaticProps = async ({ locale }: any) => ({
       "navbar",
       "hero",
       "projects",
+      "contact",
     ])),
   },
 });

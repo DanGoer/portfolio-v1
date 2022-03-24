@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .color-hover:hover {
+    color: rgb(245 158 11);
+    transition: color 1s;
+  }
+  .color-hover {
+    color: black;
+  }
+}
+
 html,
 body {
   padding: 0;

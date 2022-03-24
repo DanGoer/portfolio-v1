@@ -25,7 +25,7 @@ export default async function handler(
   });
   const mailData = {
     from: EMAIL,
-    to: "theo.leveque@gmail.com",
+    to: "dg@gmail.com",
     subject: `Message from ${req.body.name}`,
     replyTo: req.body.email,
     text: req.body.message,
