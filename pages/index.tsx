@@ -14,7 +14,7 @@ const Home: NextPage = (props) => {
     <>
       <NavBar />
       <main>
-        <div className=" bg-fixed bg-center bg-cover bg-hero w-screen  flex flex-col items-center justify-start py-48 gap-2 text-center">
+        <div className=" bg-fixed bg-center bg-cover bg-hero w-screen flex flex-col items-center justify-start pt-48 gap-2 text-center">
           <Hero />
           <Tech />
           <Projects />
@@ -34,6 +34,7 @@ export const getStaticProps = async ({ locale }: any) => ({
       "hero",
       "projects",
       "contact",
+      "impressum",
     ])),
   },
 });

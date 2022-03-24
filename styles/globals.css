@@ -7,8 +7,23 @@
     color: rgb(245 158 11);
     transition: color 1s;
   }
+
   .color-hover {
     color: black;
+  }
+
+  [type="text"],
+  [type="email"],
+  textarea {
+    @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
+     
+    shadow-sm placeholder-transparent;
+  }
+
+  label {
+    @apply font-normal absolute z-10 left-2 -top-3  text-xs rounded-full py-1 px-2 bg-white
+    peer-placeholder-shown:text-base  peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
+    transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
   }
 }
 

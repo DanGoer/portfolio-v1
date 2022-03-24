@@ -19,6 +19,7 @@ export interface SocialIconsI {
   name: string;
   viewBox: string;
   svg: string;
+  link: string;
 }
 [];
 
