@@ -1,11 +1,9 @@
 import { useTranslation } from "next-i18next";
 import React, { useState } from "react";
 import ContactButton from "./components/ContactButton";
-import ContactInput from "./components/ContactInput";
 import ContactSubTitle from "./components/ContactSubTitle";
-import ContactTextArea from "./components/ContactTextArea";
 import ContactTitle from "./components/ContactTitle";
-import axios from 'axios';
+import axios from "axios";
 
 function Contact() {
   const [name, setName] = useState<string>("");
@@ -15,20 +13,31 @@ function Contact() {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
 
+  console.log(name + email + msg);
   const { t } = useTranslation("contact");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     const body = { email: email, name: name, message: msg };
-    try {await axios({
-        url: '/api/contact',
-        method: 'POST',
+    try {
+      await axios({
+        url: "/api/contact",
+        method: "POST",
         data: JSON.stringify(body),
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-      });}
+      });
+      setName("");
+      setEmail("");
+      setMsg("");
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    } catch (err) {
+      console.error(err);
+      setIsError(true);
+    }
   };
 
   return (
@@ -65,6 +74,7 @@ function Contact() {
         </div>
         <div className="w-full relative">
           <textarea
+            onChange={(e) => setMsg(e.target.value)}
             className="peer h-96 pt-2 px-1"
             placeholder={t("input-message")}
           />
@@ -72,6 +82,17 @@ function Contact() {
         </div>
         <ContactButton isSubmitting={isSubmitting} text={t("button-contact")} />
       </form>
+      {isSuccess ? (
+        <p className="mx-auto my-8 w-max text-xl text-white">
+          {t("success-contact")}
+        </p>
+      ) : (
+        isError && (
+          <p className="mx-auto my-8 w-max text-xl text-red-500">
+            {t("error-contact")}
+          </p>
+        )
+      )}
     </section>
   );
 }

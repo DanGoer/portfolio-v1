@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { SentMessageInfo } from "nodemailer";
-require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 const PASSWORD = process.env.PASSWORD;
@@ -13,20 +12,15 @@ export default async function handler(
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
-    secure: true,
     auth: {
-      type: "OAuth2",
       user: EMAIL,
       pass: PASSWORD,
-      clientId: process.env.OAUTH_CLIENT_ID,
-      clientSecret: process.env.OAUTH_CLIENT_SECRET,
-      refreshToken: process.env.OAUTH_REFRESH_TOKEN,
     },
   });
   const mailData = {
     from: EMAIL,
-    to: "dg@gmail.com",
-    subject: `Message from ${req.body.name}`,
+    to: "d5goergens1234567895@gmail.com",
+    subject: `Nachricht von ${req.body.name}`,
     replyTo: req.body.email,
     text: req.body.message,
     html: `

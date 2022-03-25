@@ -4,5 +4,7 @@
   "input-name": "Name",
   "input-email": "Email-address",
   "input-message": "Your message for me",
-  "button-contact": "Send Message!"
+  "button-contact": "Send Message!",
+  "error-contact": "There was an error sending your message, please try again later.",
+  "success-contact": "Thanks for reaching out, I will get back to you."
 }
