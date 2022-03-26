@@ -11,7 +11,7 @@ function Impressum() {
   return (
     <footer
       id="impressum"
-      className="flex flex-col items-center gap-8 py-8 w-screen bg-cyan-900/50 text-white"
+      className="flex flex-col items-center gap-8 py-8 w-full bg-cyan-900/50 text-white"
     >
       <ImpressumTitle />
       <span className="flex flex-col gap-4">

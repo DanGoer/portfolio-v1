@@ -8,13 +8,16 @@ import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Impressum from "../components/impressum";
 
+//todo: sendmail button, distance between sections, logo, text formatting and text,
+// images opt, comments and readme, scrolling x axis problem,ts...
+
 const Home: NextPage = (props) => {
   const router = useRouter();
   return (
     <>
       <NavBar />
       <main>
-        <div className=" bg-fixed bg-center bg-cover bg-hero w-screen flex flex-col items-center justify-start pt-48 gap-2 text-center">
+        <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start pt-48 gap-2 text-center">
           <Hero />
           <Tech />
           <Projects />

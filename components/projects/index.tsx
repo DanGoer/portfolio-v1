@@ -13,7 +13,7 @@ function Projects() {
   return (
     <div
       id="projects"
-      className="gap-20 w-screen flex flex-col items-center justify-start py-48 text-center"
+      className="gap-20 w-full flex flex-col items-center justify-start py-48 text-center"
     >
       <ProjectsSectionTitle title={t("title-projects")} />
       {t("projects", { joinArrays: "+" })
@@ -23,7 +23,7 @@ function Projects() {
             <div
               className={`flex flex-col ${
                 index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-              } gap-4 w-screen bg-slate-300/95 shadow-lg`}
+              } gap-4 bg-slate-300/95 shadow-lg`}
               key={index}
             >
               <ProjectsPreview preview={projectContent[index].preview} />

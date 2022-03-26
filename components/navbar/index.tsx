@@ -17,9 +17,9 @@ function NavBar() {
   //todo:togglenav
 
   return (
-    <header className="z-30 w-screen py-0 px-6 fixed flex flex-col items-center justify-between bg-cyan-900/50">
+    <header className="z-30 w-screen py-0 fixed flex flex-col items-center justify-between bg-cyan-900/50">
       <span className=" flex flex-row justify-between items-center w-full ">
-        <div className="text-white text-xl  md:left-6 ">Logo</div>
+        <div className="text-white text-xl md:left-6">Logo</div>
         <NavBarSocialIcons />
         <span className="flex md:flex-row-reverse ">
           <NavBarLangDropDown />
@@ -30,7 +30,7 @@ function NavBar() {
         <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
       </span>
       <ul
-        className={`mt-0 overflow-hidden ease-in-out  flex flex-col gap-6 items-center transition-all duration-500   	   
+        className={`mt-0 overflow-hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   
 				${isOpen ? "h-64 " : "h-0"}`}
       >
         <NavBarLinks />
