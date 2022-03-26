@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { ContactI } from "../../../types/interfaces";
 
-function ContactInput({ placeholder, inputType, fieldType }: any) {
+function ContactInput({ placeholder, inputType, fieldType }: ContactI) {
   const [first, setfirst] = useState("");
   return (
     <div className="w-full relative">

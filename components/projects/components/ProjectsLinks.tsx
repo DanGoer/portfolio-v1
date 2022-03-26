@@ -1,6 +1,6 @@
-import React from "react";
+import { ProjectsI } from "../../../types/interfaces";
 
-function ProjectsLinks({ livelink, github }: any) {
+function ProjectsLinks({ livelink, github }: ProjectsI) {
   return (
     <span className="flex flex-row justify-center pb-4">
       <a

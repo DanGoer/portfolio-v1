@@ -6,7 +6,7 @@ function Tech() {
   return (
     <section
       id="tech"
-      className="flex flex-col items-center w-11/12  border-solid bg-slate-300/95 rounded-xl py-6 px-3"
+      className="flex flex-col items-center w-11/12 border-solid bg-slate-300/95 rounded-xl py-6 px-3"
     >
       <TechLogo />
       <TechInfo />

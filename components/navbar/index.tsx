@@ -1,12 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import NavBarLinks from "./components/NavBarLinks";
-import BgMountain from "../../public/bg-mountain.jpg";
-
-import HamBurger from "./components/NavBarHamBurger";
-import LangDropDown from "./components/NavBarLangDropDown";
-import SocialIcons from "./components/NavBarSocialIcons";
 import NavBarSocialIcons from "./components/NavBarSocialIcons";
 import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarHamBurger from "./components/NavBarHamBurger";

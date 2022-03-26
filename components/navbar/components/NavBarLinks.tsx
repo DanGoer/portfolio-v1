@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
-import { ToggleNavI } from "../../../types/interfaces";
+import { NavBarI } from "../../../types/interfaces";
 import NavBarLink from "./NavBarLink";
 
-function NavBarLinks({ toggleNav }: ToggleNavI) {
+function NavBarLinks({ toggleNav }: NavBarI) {
   const { t } = useTranslation("navbar");
   return (
     <>

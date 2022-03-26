@@ -1,8 +1,8 @@
-import { NavBarItemsTProps } from "../../../types/types";
 import { navLinks } from "../../../assets/data";
 import Link from "next/link";
+import { NavBarI } from "../../../types/interfaces";
 
-function NavBarLink({ toggleNav, idx, name }: NavBarItemsTProps) {
+function NavBarLink({ toggleNav, idx, name }: NavBarI) {
   return (
     <Link href={navLinks[idx]} passHref>
       <li

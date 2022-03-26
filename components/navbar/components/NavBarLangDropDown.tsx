@@ -1,12 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 function NavBarLangDropDown() {
-  const router = useRouter();
-  const [dropDown, setDropDown] = useState(false);
   const { t } = useTranslation("navbar");
 
   return (

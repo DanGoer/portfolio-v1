@@ -13,7 +13,6 @@ function Contact() {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
 
-  console.log(name + email + msg);
   const { t } = useTranslation("contact");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
