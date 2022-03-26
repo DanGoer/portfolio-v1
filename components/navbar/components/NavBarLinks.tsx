@@ -1,14 +1,22 @@
 import { useTranslation } from "next-i18next";
+import { ToggleNavI } from "../../../types/interfaces";
 import NavBarLink from "./NavBarLink";
 
-function NavBarLinks() {
+function NavBarLinks({ toggleNav }: ToggleNavI) {
   const { t } = useTranslation("navbar");
   return (
     <>
       {t("navbar-links", { joinArrays: "+" })
         .split("+")
         .map((item, index) => {
-          return <NavBarLink idx={index} key={item} name={item} />;
+          return (
+            <NavBarLink
+              toggleNav={toggleNav}
+              idx={index}
+              key={item}
+              name={item}
+            />
+          );
         })}
     </>
   );

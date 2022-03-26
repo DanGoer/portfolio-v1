@@ -1,6 +1,7 @@
 export type NavBarItemsT = string[];
 
 export type NavBarItemsTProps = {
-  name: string;
+  toggleNav?: () => void;
   idx: number;
+  name: string;
 };

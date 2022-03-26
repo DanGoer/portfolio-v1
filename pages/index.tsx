@@ -9,7 +9,7 @@ import Contact from "../components/contact";
 import Impressum from "../components/impressum";
 
 //todo: sendmail button, distance between sections, logo, text formatting and text,
-// images opt, comments and readme, scrolling x axis problem,ts...
+// images opt, comments and readme,ts...
 
 const Home: NextPage = (props) => {
   const router = useRouter();

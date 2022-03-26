@@ -31,3 +31,7 @@ export interface projectContentI {
   techstack: { name: string; svg: string }[];
 }
 [];
+
+export interface ToggleNavI {
+  toggleNav?: () => void;
+}
