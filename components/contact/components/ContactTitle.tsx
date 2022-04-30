@@ -1,7 +1,7 @@
 import React from "react";
-import { ContactI } from "../../../types/interfaces";
+import { ContactTitleI } from "../../../types/interfaces";
 
-function ContactTitle({ title }: ContactI) {
+function ContactTitle({ title }: ContactTitleI) {
   return <h2 className="color-hover text-white pb-8">{title}</h2>;
 }
 

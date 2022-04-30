@@ -1,7 +1,7 @@
 import React from "react";
-import { ContactI } from "../../../types/interfaces";
+import { ContactButtonI } from "../../../types/interfaces";
 
-function ContactButton({ text, isSubmitting }: ContactI) {
+function ContactButton({ text, isSubmitting }: ContactButtonI) {
   return (
     <button
       disabled={isSubmitting}

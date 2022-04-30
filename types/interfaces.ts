@@ -22,7 +22,7 @@ export interface SocialIconsI {
 
 export interface NavBarLinksI {
   pageRefs?: any;
-  toggleNav?: () => void;
+  toggleNav: () => void;
 }
 
 export interface NavBarLinkI extends NavBarLinksI {
@@ -71,14 +71,17 @@ export interface ProjectsI {
 }
 [];
 
-export interface ContactI {
-  title?: string;
-  placeholder?: string;
-  subtitle?: string;
-  inputType?: string;
-  fieldType?: string;
-  text?: string;
-  isSubmitting?: boolean;
+export interface ContactTitleI {
+  title: string;
+}
+
+export interface ContactSubTitleI {
+  subtitle: string;
+}
+
+export interface ContactButtonI {
+  text: string;
+  isSubmitting: boolean;
 }
 
 export interface ImpressumI {
