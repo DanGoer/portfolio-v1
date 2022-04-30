@@ -1,8 +1,7 @@
 import { navLinks } from "../../../assets/data";
-import Link from "next/link";
-import { NavBarI } from "../../../types/interfaces";
+import { NavBarLinkI } from "../../../types/interfaces";
 
-function NavBarLink({ toggleNav, idx, name, pageRefs }: any) {
+function NavBarLink({ toggleNav, idx, name, pageRefs }: NavBarLinkI) {
   function scrollIntoView(type: any) {
     pageRefs.current[type].scrollIntoView({
       behavior: "smooth",

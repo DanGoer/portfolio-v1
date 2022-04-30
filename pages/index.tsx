@@ -13,7 +13,7 @@ import { useRef } from "react";
 // images opt, comments and readme,ts...
 
 const Home: NextPage = (props) => {
-  const pageRefs = useRef<JSX.Element>(null);
+  const pageRefs = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
   return (
     <>

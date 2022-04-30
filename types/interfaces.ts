@@ -18,12 +18,21 @@ export interface SocialIconsI {
 }
 [];
 
-export interface NavBarI {
+// todo: what kind of TS for refs?
+
+export interface NavBarLinksI {
+  pageRefs?: any;
   toggleNav?: () => void;
+}
+
+export interface NavBarLinkI extends NavBarLinksI {
   idx: number;
-  name: string;
-  isOpen?: boolean;
-  setIsOpen?: React.Dispatch<React.SetStateAction<any>>;
+  name?: string;
+}
+
+export interface NavBarBurger {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<any>>;
 }
 
 export interface ProjectsI {

@@ -1,6 +1,6 @@
-import { NavBarI } from "../../../types/interfaces";
+import { NavBarBurger } from "../../../types/interfaces";
 
-function NavBarHamBurger({ isOpen, setIsOpen }: NavBarI) {
+function NavBarHamBurger({ isOpen, setIsOpen }: NavBarBurger) {
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
   return (
     <button
