@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ProjectsI } from "../../../types/interfaces";
+import { ProjectsTechStackI } from "../../../types/interfaces";
 
-function ProjectsTechStack({ techstack }: ProjectsI) {
+function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
   return (
     <span className="flex flex-row flex-wrap justify-center gap-4 p-4">
       {techstack.map((icon: any) => {

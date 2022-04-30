@@ -9,22 +9,23 @@ import Contact from "../components/contact";
 import Impressum from "../components/impressum";
 import { useRef } from "react";
 
-//todo: distance between sections, logo, text formatting and text,
+//todo: distance between sections, logo, text formatting and text, set ref to main at page for hero
 // images opt, comments and readme,ts...
 
 const Home: NextPage = (props) => {
   const pageRefs = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
+
   return (
     <>
       <NavBar pageRefs={pageRefs} />
       <main>
         <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start pt-48 gap-2 text-center">
-          <Hero />
-          <Tech />
-          <Projects />
+          <Hero pageRefs={pageRefs} />
+          <Tech pageRefs={pageRefs} />
+          <Projects pageRefs={pageRefs} />
           <Contact pageRefs={pageRefs} />
-          <Impressum />
+          <Impressum pageRefs={pageRefs} />
         </div>
       </main>
     </>

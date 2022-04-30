@@ -27,12 +27,38 @@ export interface NavBarLinksI {
 
 export interface NavBarLinkI extends NavBarLinksI {
   idx: number;
-  name?: string;
+  name: string;
 }
 
 export interface NavBarBurger {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<any>>;
+}
+
+export interface ProjectSectionTitleI {
+  title: string;
+}
+
+export interface ProjectPreview {
+  preview: string;
+}
+
+export interface ProjectsTitleI {
+  title: string;
+  livelink: string;
+}
+
+export interface ProjectsInfoI {
+  text: string;
+}
+
+export interface ProjectsTechStackI {
+  techstack: { name: string; svg: string }[];
+}
+
+export interface ProjectsLinksI {
+  livelink: string;
+  github: string;
 }
 
 export interface ProjectsI {
@@ -41,7 +67,7 @@ export interface ProjectsI {
   livelink: string;
   github: string;
   techstack: { name: string; svg: string }[];
-  text?: string;
+  text: string;
 }
 [];
 

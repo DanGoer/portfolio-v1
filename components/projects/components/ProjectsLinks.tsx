@@ -1,6 +1,6 @@
-import { ProjectsI } from "../../../types/interfaces";
+import { ProjectsLinksI } from "../../../types/interfaces";
 
-function ProjectsLinks({ livelink, github }: ProjectsI) {
+function ProjectsLinks({ livelink, github }: ProjectsLinksI) {
   return (
     <span className="flex flex-row justify-center pb-4">
       <a

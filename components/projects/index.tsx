@@ -8,10 +8,11 @@ import ProjectsLinks from "./components/ProjectsLinks";
 import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 
-function Projects() {
+function Projects({ pageRefs }: any) {
   const { t } = useTranslation("projects");
   return (
     <div
+      ref={(el) => (pageRefs.current = { ...pageRefs.current, projects: el })}
       id="projects"
       className="gap-20 w-full flex flex-col items-center justify-start py-48 text-center"
     >

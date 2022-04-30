@@ -6,10 +6,11 @@ import ImpressumInfo from "./components/ImpressumInfo";
 import ImpressumSubtitle from "./components/ImpressumSubtitle";
 import ImpressumTitle from "./components/ImpressumTitle";
 
-function Impressum() {
+function Impressum({ pageRefs }: any) {
   const { t } = useTranslation("impressum");
   return (
     <footer
+      ref={(el) => (pageRefs.current = { ...pageRefs.current, impressum: el })}
       id="impressum"
       className="flex flex-col items-center gap-8 py-8 w-full bg-cyan-900/50 text-white"
     >
