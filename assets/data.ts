@@ -1,12 +1,6 @@
 import { ProjectsI, SocialIconsI } from "../types/interfaces";
 
-export const navLinks = [
-  "/",
-  "/#tech",
-  "/#projects",
-  "/#contact",
-  "/#impressum",
-];
+export const navLinks = ["hero", "tech", "projects", "contact", "impressum"];
 
 export const techIcons = [
   { name: "HTML5", svg: "html5.svg" },

@@ -22,7 +22,6 @@ function NavBarLangDropDown() {
             <li className="">
               <Link passHref href="/" locale="en">
                 <button className="rounded-t bg-black/90 hover:bg-white hover:text-black text-white border-white border-2 py-2 px-4 w-32 flex justify-center transition-all duration-500 ">
-                  {" "}
                   English
                 </button>
               </Link>

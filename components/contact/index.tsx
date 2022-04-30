@@ -5,7 +5,7 @@ import ContactSubTitle from "./components/ContactSubTitle";
 import ContactTitle from "./components/ContactTitle";
 import axios from "axios";
 
-function Contact() {
+function Contact({ pageRefs }: any) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [msg, setMsg] = useState<string>("");
@@ -40,7 +40,10 @@ function Contact() {
   };
 
   return (
-    <section className="py-4">
+    <section
+      ref={(el) => (pageRefs.current = { ...pageRefs.current, contact: el })}
+      className="py-4"
+    >
       <ContactTitle title={t("h2-contact")} />
       <form
         onSubmit={handleSubmit}

@@ -2,9 +2,16 @@ import { navLinks } from "../../../assets/data";
 import Link from "next/link";
 import { NavBarI } from "../../../types/interfaces";
 
-function NavBarLink({ toggleNav, idx, name }: NavBarI) {
+function NavBarLink({ toggleNav, idx, name, pageRefs }: any) {
+  function scrollIntoView(type: any) {
+    pageRefs.current[type].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  }
   return (
-    <Link href={navLinks[idx]} passHref>
+    <button onClick={() => scrollIntoView(navLinks[idx])}>
       <li
         onClick={() => {
           if (toggleNav) {
@@ -15,7 +22,7 @@ function NavBarLink({ toggleNav, idx, name }: NavBarI) {
       >
         {name}
       </li>
-    </Link>
+    </button>
   );
 }
 

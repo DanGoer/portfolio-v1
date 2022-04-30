@@ -7,22 +7,23 @@ import { useRouter } from "next/router";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Impressum from "../components/impressum";
+import { useRef } from "react";
 
 //todo: distance between sections, logo, text formatting and text,
-// images opt, comments and readme, ts... no text cursor on text
+// images opt, comments and readme,ts...
 
 const Home: NextPage = (props) => {
-  console.log("test");
+  const pageRefs = useRef<JSX.Element>(null);
   const router = useRouter();
   return (
     <>
-      <NavBar />
+      <NavBar pageRefs={pageRefs} />
       <main>
         <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start pt-48 gap-2 text-center">
           <Hero />
           <Tech />
           <Projects />
-          <Contact />
+          <Contact pageRefs={pageRefs} />
           <Impressum />
         </div>
       </main>
