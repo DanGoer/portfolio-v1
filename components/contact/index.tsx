@@ -49,6 +49,7 @@ function Contact() {
         <ContactSubTitle subtitle={t("h3-contact")} />
         <div className="w-full relative">
           <input
+            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
@@ -61,6 +62,7 @@ function Contact() {
         </div>
         <div className="w-full relative">
           <input
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
@@ -73,11 +75,12 @@ function Contact() {
         </div>
         <div className="w-full relative">
           <textarea
+            id="message"
             onChange={(e) => setMsg(e.target.value)}
             className="peer h-96 pt-2 px-1"
             placeholder={t("input-message")}
           />
-          <label>{t("input-message")}</label>
+          <label htmlFor="message">{t("input-message")}</label>
         </div>
         <ContactButton isSubmitting={isSubmitting} text={t("button-contact")} />
       </form>

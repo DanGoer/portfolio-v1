@@ -20,7 +20,7 @@
   [type="email"],
   textarea {
     @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
-    focus:border-black focus:ring-black 
+    focus:border-black focus:ring-black px-2
     shadow-sm placeholder-transparent;
   }
 

@@ -9,9 +9,10 @@ import Contact from "../components/contact";
 import Impressum from "../components/impressum";
 
 //todo: distance between sections, logo, text formatting and text,
-// images opt, comments and readme,ts...
+// images opt, comments and readme, ts... no text cursor on text
 
 const Home: NextPage = (props) => {
+  console.log("test");
   const router = useRouter();
   return (
     <>
