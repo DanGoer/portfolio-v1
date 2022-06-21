@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ProjectPreview } from "../../../types/interfaces";
+import { ProjectPreviewI } from "../../../types/interfaces";
 
-function ProjectsPreview({ preview }: ProjectPreview) {
+function ProjectsPreview({ preview }: ProjectPreviewI) {
   return (
     <div className="lg:w-1/2 p-4 hover:p-2 transition-all duration-500">
       <Image

@@ -4,8 +4,9 @@ import ContactButton from "./components/ContactButton";
 import ContactSubTitle from "./components/ContactSubTitle";
 import ContactTitle from "./components/ContactTitle";
 import axios from "axios";
+import { InView } from "react-intersection-observer";
 
-function Contact({ pageRefs }: any) {
+function Contact({ pageRefs, handleSectionChange }: any) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [msg, setMsg] = useState<string>("");
@@ -40,65 +41,69 @@ function Contact({ pageRefs }: any) {
   };
 
   return (
-    <section
-      ref={(el) => (pageRefs.current = { ...pageRefs.current, contact: el })}
-      className="py-4"
-    >
-      <ContactTitle title={t("h2-contact")} />
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-slate-300/95 "
-      >
-        <ContactSubTitle subtitle={t("h3-contact")} />
-        <div className="w-full relative">
-          <input
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            className="peer"
-            autoComplete="name"
-            required
-            placeholder={t("input-name")}
-          />
-          <label htmlFor="name">{t("input-name")}</label>
-        </div>
-        <div className="w-full relative">
-          <input
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            className="peer"
-            autoComplete="email"
-            required
-            placeholder={t("input-email")}
-          />
-          <label htmlFor="email">{t("input-email")}</label>
-        </div>
-        <div className="w-full relative">
-          <textarea
-            id="message"
-            onChange={(e) => setMsg(e.target.value)}
-            className="peer h-96 pt-2 px-1"
-            placeholder={t("input-message")}
-          />
-          <label htmlFor="message">{t("input-message")}</label>
-        </div>
-        <ContactButton isSubmitting={isSubmitting} text={t("button-contact")} />
-      </form>
-      {isSuccess ? (
-        <p className="mx-auto my-8 w-max text-xl text-white">
-          {t("success-contact")}
-        </p>
-      ) : (
-        isError && (
-          <p className="mx-auto my-8 w-max text-xl text-red-500">
-            {t("error-contact")}
-          </p>
-        )
+    <InView threshold={0.5} onChange={handleSectionChange}>
+      {({ ref }) => (
+        <section ref={ref} id="contact" className="py-4">
+          <ContactTitle title={t("h2-contact")} />
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-slate-300/95 "
+          >
+            <ContactSubTitle subtitle={t("h3-contact")} />
+            <div className="w-full relative">
+              <input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+                className="peer"
+                autoComplete="name"
+                required
+                placeholder={t("input-name")}
+              />
+              <label htmlFor="name">{t("input-name")}</label>
+            </div>
+            <div className="w-full relative">
+              <input
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                className="peer"
+                autoComplete="email"
+                required
+                placeholder={t("input-email")}
+              />
+              <label htmlFor="email">{t("input-email")}</label>
+            </div>
+            <div className="w-full relative">
+              <textarea
+                id="message"
+                onChange={(e) => setMsg(e.target.value)}
+                className="peer h-96 pt-2 px-1"
+                placeholder={t("input-message")}
+              />
+              <label htmlFor="message">{t("input-message")}</label>
+            </div>
+            <ContactButton
+              isSubmitting={isSubmitting}
+              text={t("button-contact")}
+            />
+          </form>
+          {isSuccess ? (
+            <p className="mx-auto my-8 w-max text-xl text-white">
+              {t("success-contact")}
+            </p>
+          ) : (
+            isError && (
+              <p className="mx-auto my-8 w-max text-xl text-red-500">
+                {t("error-contact")}
+              </p>
+            )
+          )}
+        </section>
       )}
-    </section>
+    </InView>
   );
 }
 

@@ -2,7 +2,11 @@ import { useTranslation } from "next-i18next";
 import { NavBarLinksI } from "../../../types/interfaces";
 import NavBarLink from "./NavBarLink";
 
-function NavBarLinks({ toggleNav, pageRefs }: NavBarLinksI) {
+function NavBarLinks({
+  toggleNav,
+  pageRefs,
+  scrollTarget,
+}: NavBarLinksI | any) {
   const { t } = useTranslation("navbar");
   return (
     <>
@@ -11,6 +15,7 @@ function NavBarLinks({ toggleNav, pageRefs }: NavBarLinksI) {
         .map((item, index) => {
           return (
             <NavBarLink
+              scrollTarget={scrollTarget}
               pageRefs={pageRefs}
               toggleNav={toggleNav}
               idx={index}

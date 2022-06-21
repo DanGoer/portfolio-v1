@@ -22,12 +22,13 @@ export interface SocialIconsI {
 
 export interface NavBarLinksI {
   pageRefs?: any;
-  toggleNav: () => void;
+  toggleNav: (() => void) | undefined;
 }
 
 export interface NavBarLinkI extends NavBarLinksI {
   idx: number;
   name: string;
+  scrollTarget: string;
 }
 
 export interface NavBarBurger {
@@ -39,7 +40,7 @@ export interface ProjectSectionTitleI {
   title: string;
 }
 
-export interface ProjectPreview {
+export interface ProjectPreviewI {
   preview: string;
 }
 
@@ -67,7 +68,6 @@ export interface ProjectsI {
   livelink: string;
   github: string;
   techstack: { name: string; svg: string }[];
-  text: string;
 }
 [];
 
