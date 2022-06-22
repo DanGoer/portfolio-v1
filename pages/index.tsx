@@ -14,7 +14,6 @@ import { useRef, useState } from "react";
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
-  const pageRefs = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
 
   const handleSectionChange = (
@@ -28,23 +27,14 @@ const Home: NextPage = (props) => {
 
   return (
     <>
-      <NavBar scrollTarget={scrollTarget} pageRefs={pageRefs} />
+      <NavBar scrollTarget={scrollTarget} />
       <main>
         <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start pt-48 gap-2 text-center">
-          <Hero handleSectionChange={handleSectionChange} pageRefs={pageRefs} />
-          <Tech handleSectionChange={handleSectionChange} pageRefs={pageRefs} />
-          <Projects
-            handleSectionChange={handleSectionChange}
-            pageRefs={pageRefs}
-          />
-          <Contact
-            handleSectionChange={handleSectionChange}
-            pageRefs={pageRefs}
-          />
-          <Impressum
-            handleSectionChange={handleSectionChange}
-            pageRefs={pageRefs}
-          />
+          <Hero handleSectionChange={handleSectionChange} />
+          <Tech handleSectionChange={handleSectionChange} />
+          <Projects handleSectionChange={handleSectionChange} />
+          <Contact handleSectionChange={handleSectionChange} />
+          <Impressum handleSectionChange={handleSectionChange} />
         </div>
       </main>
     </>

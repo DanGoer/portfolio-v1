@@ -21,7 +21,6 @@ export interface SocialIconsI {
 // todo: what kind of TS for refs?
 
 export interface NavBarLinksI {
-  pageRefs?: any;
   toggleNav: (() => void) | undefined;
 }
 

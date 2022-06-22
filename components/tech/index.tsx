@@ -3,7 +3,7 @@ import TechIcons from "./components/TechIcons";
 import TechInfo from "./components/TechInfo";
 import TechLogo from "./components/TechLogo";
 
-function Tech({ pageRefs, handleSectionChange }: any) {
+function Tech({ handleSectionChange }: any) {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (

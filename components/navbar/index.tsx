@@ -4,7 +4,7 @@ import NavBarSocialIcons from "./components/NavBarSocialIcons";
 import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarHamBurger from "./components/NavBarHamBurger";
 
-function NavBar({ pageRefs, scrollTarget }: any) {
+function NavBar({ scrollTarget }: any) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleNav = () => {
@@ -19,7 +19,7 @@ function NavBar({ pageRefs, scrollTarget }: any) {
         <span className="flex md:flex-row-reverse ">
           <NavBarLangDropDown />
           <ul className="text-lg hidden md:flex md:flex-row gap-8 items-center">
-            <NavBarLinks scrollTarget={scrollTarget} pageRefs={pageRefs} />
+            <NavBarLinks scrollTarget={scrollTarget} />
           </ul>
         </span>
         <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />

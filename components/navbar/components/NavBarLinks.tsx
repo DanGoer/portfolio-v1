@@ -4,7 +4,7 @@ import NavBarLink from "./NavBarLink";
 
 function NavBarLinks({
   toggleNav,
-  pageRefs,
+
   scrollTarget,
 }: NavBarLinksI | any) {
   const { t } = useTranslation("navbar");
@@ -16,7 +16,6 @@ function NavBarLinks({
           return (
             <NavBarLink
               scrollTarget={scrollTarget}
-              pageRefs={pageRefs}
               toggleNav={toggleNav}
               idx={index}
               key={item}

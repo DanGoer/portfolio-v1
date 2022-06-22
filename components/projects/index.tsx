@@ -9,7 +9,7 @@ import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { InView } from "react-intersection-observer";
 
-function Projects({ pageRefs, handleSectionChange }: any) {
+function Projects({ handleSectionChange }: any) {
   const { t } = useTranslation("projects");
   return (
     <InView threshold={0.1} onChange={handleSectionChange}>
