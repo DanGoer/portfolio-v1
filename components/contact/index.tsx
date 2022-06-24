@@ -43,7 +43,7 @@ function Contact({ handleSectionChange }: any) {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id="contact" className="py-4">
+        <section ref={ref} id="contact" className="pt-48">
           <ContactTitle title={t("h2-contact")} />
           <form
             onSubmit={handleSubmit}

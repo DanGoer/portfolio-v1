@@ -5,16 +5,18 @@ import TechLogo from "./components/TechLogo";
 
 function Tech({ handleSectionChange }: any) {
   return (
-    <InView threshold={0.5} onChange={handleSectionChange}>
+    <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (
         <section
           ref={ref}
           id="tech"
-          className="flex flex-col items-center w-11/12 border-solid bg-slate-300/95 rounded-xl py-6 px-3"
+          className="pt-48 flex items-center justify-center"
         >
-          <TechLogo />
-          <TechInfo />
-          <TechIcons />
+          <div className="flex flex-col items-center w-11/12 border-solid bg-slate-300/95 rounded-xl py-6 px-3">
+            <TechLogo />
+            <TechInfo />
+            <TechIcons />
+          </div>
         </section>
       )}
     </InView>

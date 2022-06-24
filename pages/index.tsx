@@ -29,7 +29,7 @@ const Home: NextPage = (props) => {
     <>
       <NavBar scrollTarget={scrollTarget} />
       <main>
-        <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start pt-48 gap-2 text-center">
+        <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start gap-2 text-center">
           <Hero handleSectionChange={handleSectionChange} />
           <Tech handleSectionChange={handleSectionChange} />
           <Projects handleSectionChange={handleSectionChange} />

@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+> A Portfolio App using Next.js, i18next, react-intersection-observer and Tailwind
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Contact](#contact)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## General Information
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project was created with the purpose of learning Next.js, TypeScript, i18next and Tailwind.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The intention was to create an App where I can display my projects, skills and experience.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Technologies Used
 
-## Learn More
+- Next - version 12.1.00
+- Tailwind - version 3.0.23
+- next-i18next - version 10.5.0
+- react-intersection-observer - version 9.3.3
 
-To learn more about Next.js, take a look at the following resources:
+For more informations check please package.JSON.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next.js server-side-rendered app
+- German and english translation
+- Highlighting per intersection observer
 
-## Deploy on Vercel
+## Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For running it on your local environment first:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`npm install or yarn install`
+
+To run development server:
+
+`npm run dev or yarn run dev`
+
+Open http://localhost:3000 with your browser to see the result.
+For a full list of dependencies take a look at package.json.
+
+## Usage
+
+You can visit the page and see my projects and skills. Also you can find links to these projects and my LinkedIn, Github and Email.
+
+## Project Status
+
+Project is: _incomplete_
+
+This is the in progress version of my Portfolio.
+
+## Room for Improvement
+
+- Darkmode
+- Logo
+
+There are a lot of more options for improvements.
+
+## Contact
+
+## License
+
+Feel free to use this code for your own projects!

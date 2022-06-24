@@ -12,12 +12,12 @@ import { InView } from "react-intersection-observer";
 function Projects({ handleSectionChange }: any) {
   const { t } = useTranslation("projects");
   return (
-    <InView threshold={0.1} onChange={handleSectionChange}>
+    <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (
         <div
           ref={ref}
           id="projects"
-          className="gap-20 w-full flex flex-col items-center justify-start py-48 text-center"
+          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center"
         >
           <ProjectsSectionTitle title={t("title-projects")} />
           {t("projects", { joinArrays: "+" })
