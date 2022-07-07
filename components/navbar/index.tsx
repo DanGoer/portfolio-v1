@@ -4,7 +4,7 @@ import NavBarSocialIcons from "./components/NavBarSocialIcons";
 import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarHamBurger from "./components/NavBarHamBurger";
 
-function NavBar({ scrollTarget }: any) {
+function NavBar({ scrollTarget }: { scrollTarget: string }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleNav = () => {

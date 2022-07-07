@@ -5,8 +5,9 @@ import ContactSubTitle from "./components/ContactSubTitle";
 import ContactTitle from "./components/ContactTitle";
 import axios from "axios";
 import { InView } from "react-intersection-observer";
+import { SectionChangeI } from "../../types/interfaces";
 
-function Contact({ handleSectionChange }: any) {
+function Contact({ handleSectionChange }: SectionChangeI) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [msg, setMsg] = useState<string>("");

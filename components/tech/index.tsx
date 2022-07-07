@@ -1,9 +1,10 @@
 import { InView } from "react-intersection-observer";
+import { SectionChangeI } from "../../types/interfaces";
 import TechIcons from "./components/TechIcons";
 import TechInfo from "./components/TechInfo";
 import TechLogo from "./components/TechLogo";
 
-function Tech({ handleSectionChange }: any) {
+function Tech({ handleSectionChange }: SectionChangeI) {
   return (
     <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (

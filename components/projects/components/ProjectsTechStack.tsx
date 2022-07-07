@@ -4,7 +4,7 @@ import { ProjectsTechStackI } from "../../../types/interfaces";
 function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
   return (
     <span className="flex flex-row flex-wrap justify-center gap-4 p-4">
-      {techstack.map((icon: any) => {
+      {techstack.map((icon) => {
         return (
           <div key={icon.name} className=" w-12 md:w-20">
             <Image

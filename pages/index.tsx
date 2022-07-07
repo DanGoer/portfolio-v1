@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Impressum from "../components/impressum";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 //todo: distance between sections, logo, text formatting and text, set ref to main at page for hero
 // images opt, comments and readme,ts...
@@ -41,7 +41,7 @@ const Home: NextPage = (props) => {
   );
 };
 
-export const getStaticProps = async ({ locale }: any) => ({
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
       "common",

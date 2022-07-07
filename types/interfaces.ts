@@ -21,7 +21,8 @@ export interface SocialIconsI {
 // todo: what kind of TS for refs?
 
 export interface NavBarLinksI {
-  toggleNav: (() => void) | undefined;
+  toggleNav?: (() => void) | undefined;
+  scrollTarget: string;
 }
 
 export interface NavBarLinkI extends NavBarLinksI {
@@ -32,7 +33,7 @@ export interface NavBarLinkI extends NavBarLinksI {
 
 export interface NavBarBurger {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<any>>;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ProjectSectionTitleI {
@@ -85,4 +86,11 @@ export interface ContactButtonI {
 
 export interface ImpressumI {
   subtitle: string;
+}
+
+export interface SectionChangeI {
+  handleSectionChange: (
+    inView: boolean,
+    entry: IntersectionObserverEntry
+  ) => void;
 }

@@ -8,8 +8,9 @@ import ProjectsLinks from "./components/ProjectsLinks";
 import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { InView } from "react-intersection-observer";
+import { SectionChangeI } from "../../types/interfaces";
 
-function Projects({ handleSectionChange }: any) {
+function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
   return (
     <InView threshold={0.2} onChange={handleSectionChange}>

@@ -2,11 +2,7 @@ import { useTranslation } from "next-i18next";
 import { NavBarLinksI } from "../../../types/interfaces";
 import NavBarLink from "./NavBarLink";
 
-function NavBarLinks({
-  toggleNav,
-
-  scrollTarget,
-}: NavBarLinksI | any) {
+function NavBarLinks({ toggleNav, scrollTarget }: NavBarLinksI) {
   const { t } = useTranslation("navbar");
   return (
     <>

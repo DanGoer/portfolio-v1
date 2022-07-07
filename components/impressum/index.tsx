@@ -6,8 +6,9 @@ import ImpressumInfo from "./components/ImpressumInfo";
 import ImpressumSubtitle from "./components/ImpressumSubtitle";
 import ImpressumTitle from "./components/ImpressumTitle";
 import { InView } from "react-intersection-observer";
+import { SectionChangeI } from "../../types/interfaces";
 
-function Impressum({ handleSectionChange }: any) {
+function Impressum({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("impressum");
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
