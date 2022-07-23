@@ -6,6 +6,7 @@ import ContactTitle from "./components/ContactTitle";
 import axios from "axios";
 import { InView } from "react-intersection-observer";
 import { SectionChangeI } from "../../types/interfaces";
+import { motion } from "framer-motion";
 
 function Contact({ handleSectionChange }: SectionChangeI) {
   const [name, setName] = useState<string>("");
@@ -46,7 +47,11 @@ function Contact({ handleSectionChange }: SectionChangeI) {
       {({ ref }) => (
         <section ref={ref} id="contact" className="pt-48">
           <ContactTitle title={t("h2-contact")} />
-          <form
+          <motion.form
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-slate-300/95 "
           >
@@ -90,7 +95,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
               isSubmitting={isSubmitting}
               text={t("button-contact")}
             />
-          </form>
+          </motion.form>
           {isSuccess ? (
             <p className="mx-auto my-8 w-max text-xl text-white">
               {t("success-contact")}

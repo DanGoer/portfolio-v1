@@ -9,6 +9,7 @@ import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { InView } from "react-intersection-observer";
 import { SectionChangeI } from "../../types/interfaces";
+import { motion } from "framer-motion";
 
 function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
@@ -25,7 +26,11 @@ function Projects({ handleSectionChange }: SectionChangeI) {
             .split("+")
             .map((text, index) => {
               return (
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: 200 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
                   className={`flex flex-col ${
                     index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
                   } gap-4 bg-slate-300/95 shadow-lg`}
@@ -46,7 +51,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                       github={projectContent[index].github}
                     />
                   </div>
-                </div>
+                </motion.div>
               );
             })}
         </div>

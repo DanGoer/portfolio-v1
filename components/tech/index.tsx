@@ -12,7 +12,8 @@ function Tech({ handleSectionChange }: SectionChangeI) {
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           ref={ref}
           id="tech"
           className="pt-48 flex items-center justify-center"
