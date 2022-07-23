@@ -13,7 +13,7 @@ function NavBarLink({ toggleNav, idx, name, scrollTarget }: NavBarLinkI) {
             toggleNav!();
           }
         }}
-        className={`text-2xl text-white cursor-pointer hover:text-green-100 ${
+        className={`text-2xl text-white cursor-pointer duration-300 hover:text-green-100 ${
           scrollTarget === navLinks[idx] && scrollClass
         }`}
       >

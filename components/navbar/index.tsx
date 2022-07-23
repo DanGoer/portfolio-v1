@@ -13,7 +13,7 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
 
   return (
     <header className="z-30 w-screen py-0 px-4 fixed flex flex-col items-center justify-between bg-cyan-900/50">
-      <span className=" flex flex-row justify-between items-center w-full px-2">
+      <nav className="flex flex-row justify-between items-center w-full px-2">
         <div className="text-white text-xl md:left-6">Logo</div>
         <NavBarSocialIcons />
         <span className="flex md:flex-row-reverse ">
@@ -23,9 +23,9 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
           </ul>
         </span>
         <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
-      </span>
+      </nav>
       <ul
-        className={`mt-0 overflow-hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   
+        className={`mt-0 overflow-hidden md:hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   
 				${isOpen ? "h-64 " : "h-0"}`}
       >
         <NavBarLinks scrollTarget={scrollTarget} toggleNav={toggleNav} />

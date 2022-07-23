@@ -14,6 +14,7 @@ function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
               height="200"
               width="200"
             />
+            <h4>{icon.name}</h4>
           </div>
         );
       })}
