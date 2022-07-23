@@ -3,12 +3,16 @@ import { SectionChangeI } from "../../types/interfaces";
 import TechIcons from "./components/TechIcons";
 import TechInfo from "./components/TechInfo";
 import TechLogo from "./components/TechLogo";
+import { motion } from "framer-motion";
 
 function Tech({ handleSectionChange }: SectionChangeI) {
   return (
     <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
           ref={ref}
           id="tech"
           className="pt-48 flex items-center justify-center"
@@ -18,7 +22,7 @@ function Tech({ handleSectionChange }: SectionChangeI) {
             <TechInfo />
             <TechIcons />
           </div>
-        </section>
+        </motion.section>
       )}
     </InView>
   );
