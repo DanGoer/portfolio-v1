@@ -97,3 +97,7 @@ export interface ModalI {
   modal: string[];
   setModal: React.Dispatch<React.SetStateAction<string[]>>;
 }
+
+export interface CarouselI {
+  data: string[];
+}

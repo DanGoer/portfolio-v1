@@ -16,6 +16,7 @@ import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { projectContent } from "../../assets/data";
 import ProjectModal from "./components/ProjectModal";
+import ProjectCarousel from "./components/ProjectCarousel";
 
 function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
@@ -45,10 +46,13 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                   } gap-4 bg-slate-300/95 shadow-lg  rounded-xl border-solid`}
                   key={index}
                 >
-                  <ProjectsPreview
+                  {/*<ProjectsPreview
                     setModal={setModal}
                     preview={projectContent[index].preview}
-                  />
+                  />*/}
+                  <div className="w-1/2">
+                    <ProjectCarousel data={projectContent[index].preview} />
+                  </div>
                   <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
                     <ProjectsTitle
                       livelink={projectContent[index].livelink}

@@ -4,7 +4,7 @@ import { ProjectPreviewI } from "../../../types/interfaces";
 
 function ProjectsPreview({ preview, setModal }: ProjectPreviewI) {
   return (
-    <div className="lg:w-1/2 p-4 hover:p-2 transition-all duration-500">
+    <div className="lg:w-1/2 p-4 hover:p-2 transition-all duration-500 cursor-zoom-in">
       <Image
         src={`/projects/${preview[0]}`}
         alt="project-preview"
