@@ -50,7 +50,7 @@ export const socialIconsList: SocialIconsI[] = [
 export const projectContent: ProjectsI[] = [
   {
     title: "Nase Space Playground",
-    preview: "portfolio-preview.PNG",
+    preview: ["portfolio-preview.PNG", "portrait.jpg", "portfolio-preview.PNG"],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [
@@ -63,7 +63,13 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Portfolio",
-    preview: "portfolio-preview.PNG",
+    preview: [
+      "portfolio-preview.PNG",
+      "portrait.jpg",
+      "portfolio-preview.PNG",
+      "portrait.jpg",
+      "portfolio-preview.PNG",
+    ],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [
@@ -76,7 +82,14 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Weather App",
-    preview: "portfolio-preview.PNG",
+
+    preview: [
+      "portfolio-preview.PNG",
+      "portrait.jpg",
+      "portfolio-preview.PNG",
+      "portrait.jpg",
+      "portfolio-preview.PNG",
+    ],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [
@@ -88,7 +101,7 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Photo Artist App",
-    preview: "portfolio-preview.PNG",
+    preview: ["portfolio-preview.PNG", "portfolio-preview.PNG"],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [
@@ -104,7 +117,11 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Reciper",
-    preview: "portfolio-preview.PNG",
+    preview: [
+      "portfolio-preview.PNG",
+      "portfolio-preview.PNG",
+      "portfolio-preview.PNG",
+    ],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [

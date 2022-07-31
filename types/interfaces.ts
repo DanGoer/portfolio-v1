@@ -39,7 +39,8 @@ export interface ProjectSectionTitleI {
 }
 
 export interface ProjectPreviewI {
-  preview: string;
+  preview: string[];
+  setModal: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 export interface ProjectsTitleI {
@@ -62,7 +63,7 @@ export interface ProjectsLinksI {
 
 export interface ProjectsI {
   title: string;
-  preview: string;
+  preview: string[];
   livelink: string;
   github: string;
   techstack: { name: string; svg: string }[];
@@ -91,4 +92,8 @@ export interface SectionChangeI {
     inView: boolean,
     entry: IntersectionObserverEntry
   ) => void;
+}
+export interface ModalI {
+  modal: string[];
+  setModal: React.Dispatch<React.SetStateAction<string[]>>;
 }

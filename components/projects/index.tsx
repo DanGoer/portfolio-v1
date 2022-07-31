@@ -1,6 +1,6 @@
 // Projects section
 
-import React from "react";
+import React, { useState } from "react";
 
 import { SectionChangeI } from "../../types/interfaces";
 
@@ -15,9 +15,11 @@ import ProjectsLinks from "./components/ProjectsLinks";
 import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { projectContent } from "../../assets/data";
+import ProjectModal from "./components/ProjectModal";
 
 function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
+  const [modal, setModal] = useState<string[]>([]);
 
   return (
     <InView threshold={0.2} onChange={handleSectionChange}>
@@ -25,10 +27,10 @@ function Projects({ handleSectionChange }: SectionChangeI) {
         <div
           ref={ref}
           id="projects"
-          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl"
+          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl relative"
         >
           <ProjectsSectionTitle title={t("title-projects")} />
-
+          <ProjectModal modal={modal} setModal={setModal} />
           {t("projects", { joinArrays: "+" })
             .split("+")
             .map((text, index) => {
@@ -43,7 +45,10 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                   } gap-4 bg-slate-300/95 shadow-lg  rounded-xl border-solid`}
                   key={index}
                 >
-                  <ProjectsPreview preview={projectContent[index].preview} />
+                  <ProjectsPreview
+                    setModal={setModal}
+                    preview={projectContent[index].preview}
+                  />
                   <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
                     <ProjectsTitle
                       livelink={projectContent[index].livelink}
