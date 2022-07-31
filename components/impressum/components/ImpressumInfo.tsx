@@ -1,13 +1,13 @@
-import React from "react";
+import { impressumData } from "../../../assets/data";
 
 function ImpressumInfo() {
   return (
     <p className="text-lg">
-      D. Goergens
+      {impressumData.address.name}
       <br />
-      Dorstener Strasse 534
+      {impressumData.address.street}
       <br />
-      46119 Oberhausen
+      {impressumData.address.city}
     </p>
   );
 }

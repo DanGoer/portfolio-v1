@@ -19,9 +19,10 @@ function Projects({ handleSectionChange }: SectionChangeI) {
         <div
           ref={ref}
           id="projects"
-          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center"
+          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl"
         >
           <ProjectsSectionTitle title={t("title-projects")} />
+
           {t("projects", { joinArrays: "+" })
             .split("+")
             .map((text, index) => {
@@ -33,7 +34,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                   viewport={{ once: true }}
                   className={`flex flex-col ${
                     index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } gap-4 bg-slate-300/95 shadow-lg`}
+                  } gap-4 bg-slate-300/95 shadow-lg  rounded-xl border-solid`}
                   key={index}
                 >
                   <ProjectsPreview preview={projectContent[index].preview} />

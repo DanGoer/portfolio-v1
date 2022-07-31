@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next";
-import React, { useState } from "react";
+import { useState } from "react";
 import ContactButton from "./components/ContactButton";
 import ContactSubTitle from "./components/ContactSubTitle";
 import ContactTitle from "./components/ContactTitle";

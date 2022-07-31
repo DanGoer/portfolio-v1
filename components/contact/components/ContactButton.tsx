@@ -1,4 +1,3 @@
-import React from "react";
 import { ContactButtonI } from "../../../types/interfaces";
 
 function ContactButton({ text, isSubmitting }: ContactButtonI) {

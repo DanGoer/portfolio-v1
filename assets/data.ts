@@ -67,6 +67,7 @@ export const projectContent: ProjectsI[] = [
       { name: "Next.js", svg: "nextjs.svg" },
       { name: "TailwindCSS", svg: "tailwindcss.svg" },
       { name: "i18next", svg: "i18next.svg" },
+      { name: "Framer Motion", svg: "motion.svg" },
     ],
   },
   {
@@ -115,3 +116,15 @@ export const projectContent: ProjectsI[] = [
     ],
   },
 ];
+
+export const impressumData = {
+  address: {
+    name: "D.Goergens",
+    street: "Dorstener Strasse 534",
+    city: "46119 Oberhausen",
+  },
+  contact: {
+    tel: "+49 (0) 177 1234567",
+    email: "E-Mail: d.goergens@gmail.com",
+  },
+};

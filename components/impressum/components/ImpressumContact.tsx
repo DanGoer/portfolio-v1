@@ -1,11 +1,11 @@
-import React from "react";
+import { impressumData } from "../../../assets/data";
 
 function ImpressumContact() {
   return (
     <p className="text-lg">
-      Tel. Nr.: +49 (0) 177 1234567
+      {impressumData.contact.tel}
       <br />
-      E-Mail: d.goergens@gmail.com
+      {impressumData.contact.email}
     </p>
   );
 }
