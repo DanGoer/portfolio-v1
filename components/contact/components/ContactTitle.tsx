@@ -1,4 +1,3 @@
-import React from "react";
 import { ContactTitleI } from "../../../types/interfaces";
 
 function ContactTitle({ title }: ContactTitleI) {

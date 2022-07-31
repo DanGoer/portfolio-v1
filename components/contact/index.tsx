@@ -1,12 +1,17 @@
-import { useTranslation } from "next-i18next";
+// Contact component
+
 import { useState } from "react";
+
+import { SectionChangeI } from "../../types/interfaces";
+
+import { useTranslation } from "next-i18next";
+import axios from "axios";
+import { InView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 import ContactButton from "./components/ContactButton";
 import ContactSubTitle from "./components/ContactSubTitle";
 import ContactTitle from "./components/ContactTitle";
-import axios from "axios";
-import { InView } from "react-intersection-observer";
-import { SectionChangeI } from "../../types/interfaces";
-import { motion } from "framer-motion";
 
 function Contact({ handleSectionChange }: SectionChangeI) {
   const [name, setName] = useState<string>("");

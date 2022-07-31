@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { ProjectPreviewI } from "../../../types/interfaces";
 
 function ProjectsPreview({ preview }: ProjectPreviewI) {

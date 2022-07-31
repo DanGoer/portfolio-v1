@@ -1,16 +1,20 @@
+// Main page
+
 import type { NextPage } from "next";
-import Hero from "../components/hero";
-import NavBar from "../components/navbar/index";
-import Tech from "../components/tech";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
 import { useRouter } from "next/router";
+
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Impressum from "../components/impressum";
-import { useState } from "react";
+import Hero from "../components/hero";
+import NavBar from "../components/navbar/index";
+import Tech from "../components/tech";
 
 //todo: distance between sections, logo, text formatting and text, set ref to main at page for hero
-// images opt, comments and readme,ts...
+// images opt, comments and readme,
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");

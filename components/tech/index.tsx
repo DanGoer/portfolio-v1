@@ -1,9 +1,13 @@
-import { InView } from "react-intersection-observer";
+// Tech section
+
 import { SectionChangeI } from "../../types/interfaces";
+
+import { InView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 import TechIcons from "./components/TechIcons";
 import TechInfo from "./components/TechInfo";
 import TechLogo from "./components/TechLogo";
-import { motion } from "framer-motion";
 
 function Tech({ handleSectionChange }: SectionChangeI) {
   return (

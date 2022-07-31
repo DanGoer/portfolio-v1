@@ -1,4 +1,7 @@
+// NavBar
+
 import { useState } from "react";
+
 import NavBarLinks from "./components/NavBarLinks";
 import NavBarSocialIcons from "./components/NavBarSocialIcons";
 import NavBarLangDropDown from "./components/NavBarLangDropDown";

@@ -26,6 +26,7 @@ The intention was to create an App where I can display my projects, skills and e
 - Tailwind - version 3.0.23
 - next-i18next - version 10.5.0
 - react-intersection-observer - version 9.3.3
+- framer-motion - version 6.5.1
 
 For more informations check please package.JSON.
 
@@ -70,3 +71,4 @@ There are a lot of more options for improvements.
 ## License
 
 Feel free to use this code for your own projects!
+You can change your personal data in /assets/data.ts

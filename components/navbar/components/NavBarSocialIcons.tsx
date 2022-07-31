@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { socialIconsList } from "../../../assets/data";
 
 function NavBarSocialIcons() {

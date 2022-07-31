@@ -1,18 +1,24 @@
-import { useTranslation } from "next-i18next";
+// Projects section
+
 import React from "react";
+
+import { SectionChangeI } from "../../types/interfaces";
+
+import { useTranslation } from "next-i18next";
+import { InView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 import ProjectsInfo from "./components/ProjectsInfo";
 import ProjectsPreview from "./components/ProjectsPreview";
 import ProjectsTechStack from "./components/ProjectsTechStack";
-import { projectContent } from "../../assets/data";
 import ProjectsLinks from "./components/ProjectsLinks";
 import ProjectsTitle from "./components/ProjectsTitle";
 import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
-import { InView } from "react-intersection-observer";
-import { SectionChangeI } from "../../types/interfaces";
-import { motion } from "framer-motion";
+import { projectContent } from "../../assets/data";
 
 function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
+
   return (
     <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (

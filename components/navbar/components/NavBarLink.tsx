@@ -1,6 +1,6 @@
-import { navLinks } from "../../../assets/data";
 import { NavBarLinkI } from "../../../types/interfaces";
-// todo: TS
+
+import { navLinks } from "../../../assets/data";
 
 function NavBarLink({ toggleNav, idx, name, scrollTarget }: NavBarLinkI) {
   const scrollClass = "text-slate-900 font-bold";

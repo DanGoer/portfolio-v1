@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { ProjectsTechStackI } from "../../../types/interfaces";
 
 function ProjectsTechStack({ techstack }: ProjectsTechStackI) {

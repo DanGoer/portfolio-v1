@@ -1,5 +1,6 @@
-import { useTranslation } from "next-i18next";
 import Link from "next/link";
+
+import { useTranslation } from "next-i18next";
 
 function HeroButton() {
   const { t } = useTranslation("hero");

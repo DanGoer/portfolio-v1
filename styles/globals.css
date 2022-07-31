@@ -35,6 +35,7 @@
   h2 {
     @apply text-white text-5xl font-semibold;
   }
+  /* label and input settings */
 
   [type="text"],
   [type="email"],
@@ -49,4 +50,6 @@
     peer-placeholder-shown:text-base  peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
     transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
   }
+
+  /* label and input settings end*/
 }

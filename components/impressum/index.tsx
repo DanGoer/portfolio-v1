@@ -1,12 +1,15 @@
+// Impressum
+
+import { SectionChangeI } from "../../types/interfaces";
+
 import { useTranslation } from "next-i18next";
-import React from "react";
+import { InView } from "react-intersection-observer";
+
 import ImpressumContact from "./components/ImpressumContact";
 import ImpressumIcons from "./components/ImpressumIcons";
 import ImpressumInfo from "./components/ImpressumInfo";
 import ImpressumSubtitle from "./components/ImpressumSubtitle";
 import ImpressumTitle from "./components/ImpressumTitle";
-import { InView } from "react-intersection-observer";
-import { SectionChangeI } from "../../types/interfaces";
 
 function Impressum({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("impressum");

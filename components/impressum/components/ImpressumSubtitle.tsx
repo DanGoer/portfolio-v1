@@ -1,4 +1,3 @@
-import React from "react";
 import { ImpressumI } from "../../../types/interfaces";
 
 function ImpressumSubtitle({ subtitle }: ImpressumI) {

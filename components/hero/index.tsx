@@ -1,7 +1,11 @@
+// Hero part of the web app
+
+import { SectionChangeI } from "../../types/interfaces";
+
+import { InView } from "react-intersection-observer";
+
 import HeroButton from "./components/HeroButton";
 import HeroWelcomeText from "./components/HeroWelcomeText";
-import { InView } from "react-intersection-observer";
-import { SectionChangeI } from "../../types/interfaces";
 
 function Hero({ handleSectionChange }: SectionChangeI) {
   return (

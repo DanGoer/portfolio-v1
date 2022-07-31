@@ -1,4 +1,4 @@
-import React from "react";
+// TS interaces
 
 export interface BgTheme {
   children: React.ReactNode;
@@ -17,8 +17,6 @@ export interface SocialIconsI {
   link: string;
 }
 [];
-
-// todo: what kind of TS for refs?
 
 export interface NavBarLinksI {
   toggleNav?: (() => void) | undefined;

@@ -1,7 +1,9 @@
 import { ProjectsI, SocialIconsI } from "../types/interfaces";
 
+// array for simultaneously mapping over translated navbar links
 export const navLinks = ["hero", "tech", "projects", "contact", "impressum"];
 
+// tech icons for differing parts of the web app
 export const techIcons = [
   { name: "HTML5", svg: "html5.svg" },
   { name: "CSS3", svg: "css3.svg" },
@@ -22,6 +24,7 @@ export const techIcons = [
   { name: "i18next", svg: "i18next.svg" },
 ];
 
+// social icons for navbar and footer
 export const socialIconsList: SocialIconsI[] = [
   {
     name: "LinkedIn",
@@ -43,6 +46,7 @@ export const socialIconsList: SocialIconsI[] = [
   },
 ];
 
+// content for projects
 export const projectContent: ProjectsI[] = [
   {
     title: "Nase Space Playground",
@@ -117,6 +121,7 @@ export const projectContent: ProjectsI[] = [
   },
 ];
 
+// data for the impressum
 export const impressumData = {
   address: {
     name: "D.Goergens",

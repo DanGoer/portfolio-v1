@@ -1,4 +1,3 @@
-import React from "react";
 import { ContactSubTitleI } from "../../../types/interfaces";
 
 function ContactSubTitle({ subtitle }: ContactSubTitleI) {

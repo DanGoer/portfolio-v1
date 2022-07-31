@@ -1,31 +1,8 @@
 import Image from "next/image";
+
+import { motion } from "framer-motion";
+
 import { techIcons } from "../../../assets/data";
-import { motion, Variants } from "framer-motion";
-
-const listVariants = {
-  hidden: {
-    transition: {
-      staggerChildren: 0.3,
-      staggerDirection: -1,
-    },
-  },
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    x: -16,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-  },
-};
 
 function TechIcons() {
   return (

@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next";
 
 function HeroWelcomeText() {
   const { t } = useTranslation("hero");
+
   return (
     <>
       <h1 className="text-black text-5xl md:text-7xl pb-4 font-bold">
