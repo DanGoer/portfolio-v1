@@ -100,4 +100,5 @@ export interface ModalI {
 
 export interface CarouselI {
   data: string[];
+  setModal: React.Dispatch<React.SetStateAction<string[]>>;
 }

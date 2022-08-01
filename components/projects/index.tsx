@@ -43,15 +43,19 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                   viewport={{ once: true }}
                   className={`flex flex-col ${
                     index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } gap-4 bg-slate-300/95 shadow-lg  rounded-xl border-solid`}
+                  } gap-4 bg-slate-300/95 shadow-lg rounded-xl border-solid`}
                   key={index}
                 >
-                  {/*<ProjectsPreview
-                    setModal={setModal}
-                    preview={projectContent[index].preview}
-                  />*/}
-                  <div className="w-1/2">
-                    <ProjectCarousel data={projectContent[index].preview} />
+                  {/*
+                    <ProjectsPreview
+                      setModal={setModal}
+                      preview={projectContent[index].preview}
+                    />*/}
+                  <div className="lg:w-1/2 w-full max-h-full relative flex justify-center items-center">
+                    <ProjectCarousel
+                      setModal={setModal}
+                      data={projectContent[index].preview}
+                    />
                   </div>
                   <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
                     <ProjectsTitle

@@ -1,129 +1,96 @@
-import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import React from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { wrap } from "popmotion";
 import { CarouselI } from "../../../types/interfaces";
 
-const ProjectCarousel = ({ data }: CarouselI) => {
-  const maxScrollWidth = useRef<number>(0);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const carousel = useRef(null);
+const variants = {
+  enter: (direction: number) => {
+    return {
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+    };
+  },
 
-  const movePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+
+  exit: (direction: number) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+    };
+  },
+};
+
+/**
+ * Experimenting with distilling swipe offset and velocity into a single variable, so the
+ * less distance a user has swiped, the more velocity they need to register as a swipe.
+ * Should accomodate longer swipes and short flicks without having binary checks on
+ * just distance thresholds and velocity > 0.
+ */
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
+function ProjectCarousel({ data, setModal }: CarouselI) {
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
+  // then wrap that within 0-2 to find our image ID in the array below. By passing an
+  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
+  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
+  const imageIndex = wrap(0, data.length, page);
+
+  const paginate = (newDirection: number) => {
+    setPage([page + newDirection, newDirection]);
   };
-
-  const moveNext = () => {
-    if (
-      carousel.current !== null &&
-      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
-    ) {
-      setCurrentIndex((prevState) => prevState + 1);
-    }
-  };
-
-  const isDisabled = (direction) => {
-    if (direction === "prev") {
-      return currentIndex <= 0;
-    }
-
-    if (direction === "next" && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
-  };
-
-  useEffect(() => {
-    if (carousel !== null && carousel.current !== null) {
-      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
-    }
-  }, [currentIndex]);
-
-  useEffect(() => {
-    maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - carousel.current.offsetWidth
-      : 0;
-  }, []);
 
   return (
-    <div className="carousel my-12 mx-auto">
-      <div className="relative overflow-hidden">
-        <div className="flex justify-between absolute top left w-full h-full">
-          <button
-            onClick={movePrev}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled("prev")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <span className="sr-only">Prev</span>
-          </button>
-          <button
-            onClick={moveNext}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled("next")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </button>
-        </div>
-        <div
-          ref={carousel}
-          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
-        >
-          {data.map((resource, index) => {
-            return (
-              <div
-                key={index}
-                className="carousel-item text-center relative w-96 h-96 snap-start"
-              >
-                <a
-                  href={resource}
-                  className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
-                  style={{ backgroundImage: `url(/${resource || ""})` }}
-                >
-                  <Image
-                    src={"/" + resource || ""}
-                    alt="project carousel"
-                    className="w-full aspect-square hidden"
-                    layout="fill"
-                  />
-                </a>
-              </div>
-            );
-          })}
-        </div>
+    <>
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.img
+          key={page}
+          onClick={() => setModal(data)}
+          className="absolute max-w-full max-h-full h-screen"
+          src={"/projects/" + data[imageIndex]}
+          alt="project carousel"
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 200, damping: 30 },
+            opacity: { duration: 0.3 },
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+        />
+      </AnimatePresence>
+      <div className="next" onClick={() => paginate(1)}>
+        {"‣"}
       </div>
-    </div>
+      <div className="prev" onClick={() => paginate(-1)}>
+        {"‣"}
+      </div>
+    </>
   );
-};
+}
 
 export default ProjectCarousel;
