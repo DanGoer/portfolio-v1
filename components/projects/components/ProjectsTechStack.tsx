@@ -4,22 +4,25 @@ import { ProjectsTechStackI } from "../../../types/interfaces";
 
 function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
   return (
-    <span className="flex flex-row flex-wrap justify-center gap-4 p-4">
+    <ul className="flex flex-row flex-wrap justify-center gap-8 p-4">
       {techstack.map((icon) => {
         return (
-          <div key={icon.name} className=" w-12 md:w-20">
+          <li
+            key={icon.name}
+            className="w-12 md:w-20 flex justify-center items-center flex-col"
+          >
             <Image
-              className="mx-4"
+              className=""
               src={`/tech-icons/${icon.svg}`}
               alt="tech-icon"
-              height="200"
-              width="200"
+              height="100"
+              width="100"
             />
-            <h4>{icon.name}</h4>
-          </div>
+            <p>{icon.name}</p>
+          </li>
         );
       })}
-    </span>
+    </ul>
   );
 }
 

@@ -15,7 +15,7 @@ function TechIcons() {
             transition={{ duration: 0.3, delay: 0.07 * index }}
             viewport={{ once: true }}
             key={icon.name}
-            className="flex flex-col m-4"
+            className="flex flex-col m-4 w-[70px] lg:w-[100px] items-center justify-center"
           >
             <Image
               src={`/tech-icons/${icon.svg}`}
@@ -23,7 +23,7 @@ function TechIcons() {
               width="100"
               height="100"
             />
-            <h3 className="color-hover text-xl font-semibold mt-2">
+            <h3 className="color-hover text-base lg:text-xl font-semibold mt-2">
               {icon.name}
             </h3>
           </motion.li>

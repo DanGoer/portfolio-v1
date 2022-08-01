@@ -36,42 +36,44 @@ function Projects({ handleSectionChange }: SectionChangeI) {
             .split("+")
             .map((text, index) => {
               return (
-                <motion.div
-                  initial={{ opacity: 0, y: 200 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className={`flex flex-col ${
-                    index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } gap-4 bg-slate-300/95 shadow-lg rounded-xl border-solid`}
-                  key={index}
-                >
-                  {/*
+                <>
+                  <ProjectsTitle
+                    livelink={projectContent[index].livelink}
+                    title={projectContent[index].title}
+                  />
+                  <motion.div
+                    initial={{ opacity: 0, y: 200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className={`flex flex-col ${
+                      index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
+                    } gap-4 bg-slate-300/95 shadow-lg rounded-xl border-solid p-2 lg:p-8`}
+                    key={index}
+                  >
+                    {/*
                     <ProjectsPreview
                       setModal={setModal}
                       preview={projectContent[index].preview}
                     />*/}
-                  <div className="lg:w-1/2 w-full max-h-full relative flex justify-center items-center">
-                    <ProjectCarousel
-                      setModal={setModal}
-                      data={projectContent[index].preview}
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
-                    <ProjectsTitle
-                      livelink={projectContent[index].livelink}
-                      title={projectContent[index].title}
-                    />
-                    <ProjectsInfo text={text} />
-                    <ProjectsTechStack
-                      techstack={projectContent[index].techstack}
-                    />
-                    <ProjectsLinks
-                      livelink={projectContent[index].livelink}
-                      github={projectContent[index].github}
-                    />
-                  </div>
-                </motion.div>
+                    <div className="lg:w-1/2 w-full max-h-full relative flex justify-center items-center h-96 lg:h-auto overflow-hidden grow">
+                      <ProjectCarousel
+                        setModal={setModal}
+                        data={projectContent[index].preview}
+                      />
+                    </div>
+                    <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
+                      <ProjectsInfo text={text} />
+                      <ProjectsTechStack
+                        techstack={projectContent[index].techstack}
+                      />
+                      <ProjectsLinks
+                        livelink={projectContent[index].livelink}
+                        github={projectContent[index].github}
+                      />
+                    </div>
+                  </motion.div>
+                </>
               );
             })}
         </div>

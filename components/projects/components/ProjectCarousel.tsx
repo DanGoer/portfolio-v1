@@ -57,7 +57,7 @@ function ProjectCarousel({ data, setModal }: CarouselI) {
         <motion.img
           key={page}
           onClick={() => setModal(data)}
-          className="absolute max-w-full max-h-full h-screen"
+          className="absolute max-w-full lg:max-h-full max-h-96"
           src={"/projects/" + data[imageIndex]}
           alt="project carousel"
           custom={direction}
