@@ -29,7 +29,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
     const body = { email: email, name: name, message: msg };
     try {
       await axios({
-        url: "/api/contact",
+        url: "/api/sendgrid",
         method: "POST",
         data: JSON.stringify(body),
         headers: {

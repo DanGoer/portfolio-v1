@@ -9,7 +9,7 @@ function NavBarLogo() {
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 182.85 165"
-        className="w-20"
+        className="w-14 md:w-20"
       >
         <defs></defs>
         <path
