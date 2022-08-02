@@ -111,7 +111,7 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Reciper",
-    preview: ["port.jpg", "port.jpg", "port.jpg"],
+    preview: ["neu.JPG", "port.jpg", "neu.JPG", "port.jpg", "port.jpg"],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [

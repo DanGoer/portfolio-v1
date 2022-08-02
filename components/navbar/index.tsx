@@ -6,6 +6,7 @@ import NavBarLinks from "./components/NavBarLinks";
 import NavBarSocialIcons from "./components/NavBarSocialIcons";
 import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarHamBurger from "./components/NavBarHamBurger";
+import NavBarLogo from "./components/NavBarLogo";
 
 function NavBar({ scrollTarget }: { scrollTarget: string }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,7 +18,7 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
   return (
     <header className="z-30 w-screen py-0 px-4 fixed flex flex-col items-center justify-between bg-cyan-900/50">
       <nav className="flex flex-row justify-between items-center w-full px-2">
-        <div className="text-white text-xl md:left-6">Logo</div>
+        <NavBarLogo />
         <NavBarSocialIcons />
         <span className="flex md:flex-row-reverse ">
           <NavBarLangDropDown />
