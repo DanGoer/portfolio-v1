@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { NavBarLinksI } from "../../../types/interfaces";
 
 import { useTranslation } from "next-i18next";
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 
 import NavBarLink from "./NavBarLink";
 import { navLinks } from "../../../assets/data";

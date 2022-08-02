@@ -1,6 +1,6 @@
 import { NavBarLinkI } from "../../../types/interfaces";
 
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { navLinks } from "../../../assets/data";
 

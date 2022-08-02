@@ -19,10 +19,6 @@
     box-sizing: border-box;
   }
 
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
   .color-hover:hover {
     color: rgb(245 158 11);
     transition: color 1s;
@@ -78,5 +74,9 @@
   .prev {
     left: 10px;
     transform: scale(-1);
+  }
+
+  .test3 {
+    transform-origin: 50% -30px;
   }
 }
