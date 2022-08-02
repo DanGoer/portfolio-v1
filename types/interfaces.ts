@@ -27,6 +27,8 @@ export interface NavBarLinkI extends NavBarLinksI {
   idx: number;
   name: string;
   scrollTarget: string;
+  active: boolean;
+  setActive?: (() => void) | null;
 }
 
 export interface NavBarBurger {
