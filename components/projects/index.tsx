@@ -30,13 +30,13 @@ function Projects({ handleSectionChange }: SectionChangeI) {
           id="projects"
           className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl relative"
         >
-          <ProjectsSectionTitle title={t("title-projects")} />
           <ProjectModal modal={modal} setModal={setModal} />
+          <ProjectsSectionTitle title={t("title-projects")} />
           {t("projects", { joinArrays: "+" })
             .split("+")
             .map((text, index) => {
               return (
-                <>
+                <div key={index}>
                   <ProjectsTitle
                     livelink={projectContent[index].livelink}
                     title={projectContent[index].title}
@@ -49,7 +49,6 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                     className={`flex flex-col ${
                       index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
                     } gap-4 bg-slate-300/95 shadow-lg rounded-xl border-solid p-2 lg:p-8`}
-                    key={index}
                   >
                     {/*
                     <ProjectsPreview
@@ -73,7 +72,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                       />
                     </div>
                   </motion.div>
-                </>
+                </div>
               );
             })}
         </div>
