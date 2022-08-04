@@ -43,7 +43,7 @@ const Home: NextPage = (props) => {
                 transition={{ duration: 1.2 }}
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
-                className={`bg-sky-800 w-screen h-screen fixed top-0 left-0 -z-1`}
+                className={`bg-sky-800 w-screen h-screen fixed top-0 left-0 z-1`}
               ></motion.div>
             )}
           </AnimatePresence>

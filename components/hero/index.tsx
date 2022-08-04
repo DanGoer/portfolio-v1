@@ -9,7 +9,7 @@ import HeroWelcomeText from "./components/HeroWelcomeText";
 
 function Hero({ handleSectionChange }: SectionChangeI) {
   return (
-    <InView threshold={0.2} onChange={handleSectionChange}>
+    <InView threshold={0.8} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id="hero" className="h-screen w-full relative">
           <div className="absolute text-left flex flex-col left-1/4 top-1/4">

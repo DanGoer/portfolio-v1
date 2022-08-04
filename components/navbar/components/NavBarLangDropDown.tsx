@@ -38,7 +38,7 @@ function NavBarLangDropDown() {
 
   return (
     <>
-      <div className="p-10">
+      <div className="px-10">
         <motion.div
           onHoverStart={toggleHoverMenu}
           onHoverEnd={toggleHoverMenu}
