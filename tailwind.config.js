@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: { mint: "rgba(0, 255, 208, 0.6)" },
       backgroundImage: {
         hero: "url('/bg-mountain.jpg')",
         bg1: "url('/bg-mountain.jpg')",

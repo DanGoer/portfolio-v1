@@ -1,10 +1,11 @@
 // Main page
 
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Projects from "../components/projects";
 import Contact from "../components/contact";
@@ -33,8 +34,19 @@ const Home: NextPage = (props) => {
     <>
       <NavBar scrollTarget={scrollTarget} />
       <main>
-        <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start gap-2 text-center">
-          <Hero handleSectionChange={handleSectionChange} />
+        <div className="bg-fixed bg-center bg-cover bg-hero w-full flex flex-col items-center justify-start gap-2 text-center relative">
+          <Hero handleSectionChange={handleSectionChange} />{" "}
+          <AnimatePresence>
+            {(scrollTarget === "projects" || scrollTarget === "tech") && (
+              <motion.div
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                className={`bg-sky-800 w-screen h-screen fixed top-0 left-0 -z-1`}
+              ></motion.div>
+            )}
+          </AnimatePresence>
           <Tech handleSectionChange={handleSectionChange} />
           <Projects handleSectionChange={handleSectionChange} />
           <Contact handleSectionChange={handleSectionChange} />

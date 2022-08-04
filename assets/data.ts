@@ -49,7 +49,7 @@ export const socialIconsList: SocialIconsI[] = [
 // content for projects
 export const projectContent: ProjectsI[] = [
   {
-    title: "Nase Space Playground",
+    title: "Nasa Space Playground",
     preview: ["portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
     livelink: "https://github.com/",
     github: "https://github.com/",
@@ -140,3 +140,5 @@ export const impressumData = {
     email: "E-Mail: d.goergens@gmail.com",
   },
 };
+
+export const heroData = { name: "Da Goergens" };

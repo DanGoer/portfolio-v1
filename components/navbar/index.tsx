@@ -16,7 +16,7 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
   };
 
   return (
-    <header className="z-30 w-screen py-0 px-4 fixed flex flex-col items-center justify-between bg-cyan-900/50">
+    <header className="z-30 w-screen py-0 px-4 fixed flex flex-col shadow items-center justify-between bg-cyan-900/50">
       <nav className="flex flex-row justify-between items-center w-full px-2">
         <NavBarLogo />
         <NavBarSocialIcons />

@@ -14,6 +14,7 @@ function NavBarLinks({ toggleNav, scrollTarget }: NavBarLinksI) {
   const handleSelection = (index: number) => {
     setActiveItem(index);
   };
+
   const { t } = useTranslation("navbar");
 
   useEffect(() => {

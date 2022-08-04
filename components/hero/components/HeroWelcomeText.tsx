@@ -1,20 +1,15 @@
 import { useTranslation } from "next-i18next";
+import { heroData } from "../../../assets/data";
 
 function HeroWelcomeText() {
   const { t } = useTranslation("hero");
 
   return (
     <>
-      <h1 className="text-black text-5xl md:text-7xl pb-4 font-bold">
-        {t("h1-hero")}
-      </h1>
-      <p className="text-2xl font-medium">
-        {t("p-1-hero")}
-        <br />
-        {t("p-2-hero")}
-        <br />
-        {t("p-3-hero")}
-      </p>
+      <h1 className="text-xl font-bold">{t("h1-hero")}</h1>
+      <h2 className="text-6xl">{heroData.name}.</h2>
+      <h3 className="text-6xl">{t("h3-hero")}</h3>
+      <p className="text-2xl font-medium max-w-[600px]">{t("p-1-hero")}</p>
     </>
   );
 }
