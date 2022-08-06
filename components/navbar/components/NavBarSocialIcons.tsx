@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { socialIconsList } from "../../../assets/data";
+import { ScrollTargetI } from "../../../types/interfaces";
 
-function NavBarSocialIcons() {
+function NavBarSocialIcons({ scrollTarget }: ScrollTargetI) {
   return (
     <span className="flex flex-row gap-6">
       {socialIconsList.map((icon) => {
@@ -14,7 +15,11 @@ function NavBarSocialIcons() {
               viewBox={icon.viewBox}
             >
               <g
-                className="group-hover:fill-amber-500 duration-300"
+                className={`${
+                  scrollTarget === "hero"
+                    ? "group-hover:fill-navBeforeHover fill-navBeforeOn"
+                    : "group-hover:fill-navAfterHover fill-navAfterOn"
+                } duration-300`}
                 fill="#fff"
               >
                 <path d={icon.svg} />

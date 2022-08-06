@@ -33,15 +33,19 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
       className="z-30 w-screen px-4 fixed flex flex-col shadow items-center justify-between"
     >
       <nav className="flex flex-row justify-between items-center w-full px-2">
-        <NavBarLogo />
-        <NavBarSocialIcons />
+        <NavBarLogo scrollTarget={scrollTarget} />
+        <NavBarSocialIcons scrollTarget={scrollTarget} />
         <span className="flex md:flex-row-reverse ">
-          <NavBarLangDropDown />
+          <NavBarLangDropDown scrollTarget={scrollTarget} />
           <ul className="text-lg hidden md:flex md:flex-row gap-8 items-center">
             <NavBarLinks scrollTarget={scrollTarget} />
           </ul>
         </span>
-        <NavBarHamBurger isOpen={isOpen} setIsOpen={setIsOpen} />
+        <NavBarHamBurger
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          scrollTarget={scrollTarget}
+        />
       </nav>
       <ul
         className={`mt-0 overflow-hidden md:hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   

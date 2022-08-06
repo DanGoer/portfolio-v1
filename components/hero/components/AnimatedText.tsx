@@ -14,7 +14,6 @@ const Wrapper = ({ children }: WrapperProps) => {
 
 // Map API "type" vaules to JSX tag names, "classNames" to css classes
 const tagMap: TagMapI = {
-  paragraph: { type: "p", classNames: "" },
   heading1: { type: "h1", classNames: "text-5xl pb-3" },
   heading2: { type: "h2", classNames: "text-5xl pb-3" },
   heading3: { type: "h3", classNames: "text-5xl pb-3" },

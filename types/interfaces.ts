@@ -34,6 +34,7 @@ export interface NavBarLinkI extends NavBarLinksI {
 export interface NavBarBurger {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  scrollTarget: string;
 }
 
 export interface ProjectSectionTitleI {
@@ -111,7 +112,6 @@ export interface AnimatedTextI {
 }
 
 export interface TagMapI {
-  paragraph: { type: string; classNames: string };
   heading1: { type: string; classNames: string };
   heading2: { type: string; classNames: string };
   heading3: { type: string; classNames: string };
@@ -123,4 +123,8 @@ export type WrapperProps = {
 
 export interface SectionTitleI {
   title: string;
+}
+
+export interface ScrollTargetI {
+  scrollTarget: string;
 }

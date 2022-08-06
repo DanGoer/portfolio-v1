@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from "react";
+import { ScrollTargetI } from "../../../types/interfaces";
 
-function NavBarLogo() {
+function NavBarLogo({ scrollTarget }: ScrollTargetI) {
   return (
     <a href="#hero">
       <svg
@@ -9,7 +9,11 @@ function NavBarLogo() {
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 182.85 165"
-        className="w-14 md:w-20 transition-all duration-300 hover:fill-navAfterOn fill-navBefore"
+        className={`w-14 md:w-20 transition-all duration-300 ${
+          scrollTarget === "hero"
+            ? "hover:fill-navBeforeHover fill-navBeforeOn"
+            : "hover:fill-navAfterHover fill-navAfterOn"
+        }`}
       >
         <defs></defs>
         <path

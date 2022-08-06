@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { ScrollTargetI } from "../../../types/interfaces";
 
 const subMenuAnimate = {
   enter: {
@@ -27,7 +28,7 @@ const subMenuAnimate = {
   },
 };
 
-function NavBarLangDropDown() {
+function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
   const { t } = useTranslation("navbar");
   const router = useRouter();
 
@@ -44,7 +45,11 @@ function NavBarLangDropDown() {
           onHoverEnd={toggleHoverMenu}
           className="inline-block relative"
         >
-          <button className="bg-gray-300/0 text-white border-white border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32">
+          <button
+            className={`bg-gray-300/0 text-white border-white ${
+              scrollTarget === "hero" ? "" : ""
+            } border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32`}
+          >
             <span className="mr-1">{t("language-dropdown")}</span>
             <svg
               className="fill-current h-4 w-4"

@@ -22,8 +22,12 @@ function NavBarLink({
           toggleNav!();
         }
       }}
-      className={`text-2xl text-white cursor-pointer duration-300 hover:text-green-100 ${
-        scrollTarget === navLinks[idx] && "text-slate-900 font-bold"
+      className={`${
+        scrollTarget === "hero"
+          ? "text-navBeforeOn hover:text-navBeforeHover"
+          : "text-navAfterOn hover:text-navAfterHover"
+      } text-2xl cursor-pointer duration-300 ${
+        scrollTarget === navLinks[idx] && "text-hoverEffect font-bold"
       }`}
     >
       <motion.a

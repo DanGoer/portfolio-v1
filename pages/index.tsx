@@ -1,8 +1,7 @@
 // Main page
 
 import type { NextPage } from "next";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useState } from "react";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { AnimatePresence, motion } from "framer-motion";
@@ -15,7 +14,7 @@ import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
 
 //todo: distance between sections, logo, text formatting and text,
-// custom colors for hero and navbar
+// custom colors for hero and navbar, where on page icon ,language drop down color change
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
