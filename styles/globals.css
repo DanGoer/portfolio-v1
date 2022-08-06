@@ -32,9 +32,6 @@
     color: black;
   }
 
-  h2 {
-    @apply text-white text-5xl font-semibold;
-  }
   /* label and input settings */
 
   [type="text"],

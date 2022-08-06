@@ -104,3 +104,19 @@ export interface CarouselI {
   data: string[];
   setModal: React.Dispatch<React.SetStateAction<string[]>>;
 }
+
+export interface AnimatedTextI {
+  text: string;
+  type: string;
+}
+
+export interface TagMapI {
+  paragraph: { type: string; classNames: string };
+  heading1: { type: string; classNames: string };
+  heading2: { type: string; classNames: string };
+  heading3: { type: string; classNames: string };
+}
+
+export type WrapperProps = {
+  children?: React.ReactNode;
+};

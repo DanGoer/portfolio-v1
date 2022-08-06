@@ -11,7 +11,7 @@ import TechLogo from "./components/TechLogo";
 
 function Tech({ handleSectionChange }: SectionChangeI) {
   return (
-    <InView threshold={0.1} onChange={handleSectionChange}>
+    <InView threshold={0.3} onChange={handleSectionChange}>
       {({ ref }) => (
         <motion.section
           initial={{ opacity: 0 }}

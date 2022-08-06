@@ -141,4 +141,4 @@ export const impressumData = {
   },
 };
 
-export const heroData = { name: "Da Goergens" };
+export const heroData = { name: "D Goergens" };
