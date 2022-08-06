@@ -60,7 +60,7 @@ function ProjectModal({ modal, setModal }: ModalI) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed left-0 top-20 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-white/70 z-50 flex items-center justify-center overflow-hidden"
+              className="fixed left-0 top-20 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-impressum z-50 flex items-center justify-center overflow-hidden"
             >
               <motion.img
                 key={modal[imageIndex]}

@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 import ContactButton from "./components/ContactButton";
 import ContactSubTitle from "./components/ContactSubTitle";
-import ContactTitle from "./components/ContactTitle";
+import SectionTitle from "../elements/SectionTitle";
 
 function Contact({ handleSectionChange }: SectionChangeI) {
   const [name, setName] = useState<string>("");
@@ -51,14 +51,14 @@ function Contact({ handleSectionChange }: SectionChangeI) {
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id="contact" className="pt-48">
-          <ContactTitle title={t("h2-contact")} />
+          <SectionTitle title={t("h2-contact")} />
           <motion.form
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-slate-300/95 "
+            className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-container"
           >
             <ContactSubTitle subtitle={t("h3-contact")} />
             <div className="w-full relative">
@@ -102,7 +102,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
             />
           </motion.form>
           {isSuccess ? (
-            <p className="mx-auto my-8 w-max text-xl text-white">
+            <p className="mx-auto my-8 w-max text-xl text-textBgOn">
               {t("success-contact")}
             </p>
           ) : (

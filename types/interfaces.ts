@@ -120,3 +120,7 @@ export interface TagMapI {
 export type WrapperProps = {
   children?: React.ReactNode;
 };
+
+export interface SectionTitleI {
+  title: string;
+}

@@ -23,7 +23,7 @@ function TechIcons() {
               width="100"
               height="100"
             />
-            <h3 className="color-hover text-base lg:text-xl font-semibold mt-2">
+            <h3 className="text-base lg:text-xl font-semibold mt-2">
               {icon.name}
             </h3>
           </motion.li>

@@ -14,12 +14,11 @@ import Hero from "../components/hero";
 import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
 
-//todo: distance between sections, logo, text formatting and text, set ref to main at page for hero
-// images opt, comments and readme,
+//todo: distance between sections, logo, text formatting and text,
+// custom colors for hero and navbar
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
-  const router = useRouter();
 
   const handleSectionChange = (
     inView: boolean,
@@ -43,7 +42,7 @@ const Home: NextPage = (props) => {
                 transition={{ duration: 1.2 }}
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
-                className={`bg-sky-800 w-screen h-screen fixed top-0 left-0 z-1`}
+                className={`bg-fadeIn w-screen h-screen fixed top-0 left-0 z-1`}
               ></motion.div>
             )}
           </AnimatePresence>

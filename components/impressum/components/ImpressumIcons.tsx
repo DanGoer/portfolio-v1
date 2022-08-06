@@ -15,7 +15,7 @@ function ImpressumIcons() {
               viewBox={icon.viewBox}
             >
               <g
-                className="group-hover:fill-amber-500 duration-300"
+                className="group-hover:fill-hoverEffect duration-300 fill-impressumOn"
                 fill="#fff"
               >
                 <path d={icon.svg} />

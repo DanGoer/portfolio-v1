@@ -1,7 +1,7 @@
 function TechInfo() {
   return (
     <span>
-      <h2 className="my-4 text-black">About Myself</h2>
+      <h2 className="my-4">About Myself</h2>
       <p>
         I am a self thaught WebDev, who loves challenges. <br />
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde maxime

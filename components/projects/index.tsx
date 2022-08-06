@@ -9,14 +9,13 @@ import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 import ProjectsInfo from "./components/ProjectsInfo";
-import ProjectsPreview from "./components/ProjectsPreview";
 import ProjectsTechStack from "./components/ProjectsTechStack";
 import ProjectsLinks from "./components/ProjectsLinks";
 import ProjectsTitle from "./components/ProjectsTitle";
-import ProjectsSectionTitle from "./components/ProjectsSectionTitle";
 import { projectContent } from "../../assets/data";
 import ProjectModal from "./components/ProjectModal";
 import ProjectCarousel from "./components/ProjectCarousel";
+import SectionTitle from "../elements/SectionTitle";
 
 function Projects({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("projects");
@@ -31,7 +30,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
           className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl relative"
         >
           <ProjectModal modal={modal} setModal={setModal} />
-          <ProjectsSectionTitle title={t("title-projects")} />
+          <SectionTitle title={t("title-projects")} />
           {t("projects", { joinArrays: "+" })
             .split("+")
             .map((text, index) => {
@@ -48,13 +47,8 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                     viewport={{ once: true }}
                     className={`flex flex-col ${
                       index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-                    } gap-4 bg-slate-300/95 shadow-lg rounded-xl border-solid p-2 lg:p-8`}
+                    } gap-4 bg-container text-containerOn shadow-lg rounded-xl border-solid p-2 lg:p-8`}
                   >
-                    {/*
-                    <ProjectsPreview
-                      setModal={setModal}
-                      preview={projectContent[index].preview}
-                    />*/}
                     <div className="lg:w-1/2 w-full max-h-full relative flex justify-center items-center h-96 lg:h-auto overflow-hidden grow">
                       <ProjectCarousel
                         setModal={setModal}

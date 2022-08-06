@@ -23,22 +23,13 @@
     box-sizing: border-box;
   }
 
-  .color-hover:hover {
-    @apply text-mint;
-    transition: color 1s;
-  }
-
-  .color-hover {
-    color: black;
-  }
-
   /* label and input settings */
 
   [type="text"],
   [type="email"],
   textarea {
     @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
-    focus:border-black focus:ring-black px-2
+    focus:border-containerOn focus:ring-containerOn px-2
     shadow-sm placeholder-transparent;
   }
 

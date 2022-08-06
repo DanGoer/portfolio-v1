@@ -22,7 +22,7 @@ function Tech({ handleSectionChange }: SectionChangeI) {
           id="tech"
           className="pt-48 flex items-center justify-center z-10"
         >
-          <div className="flex flex-col items-center w-11/12 border-solid bg-slate-300/95 rounded-xl py-6 px-3 max-w-6xl">
+          <div className="flex flex-col items-center w-11/12 border-solid bg-container rounded-xl py-6 px-3 max-w-6xl text-containerOn">
             <TechLogo />
             <TechInfo />
             <TechIcons />
