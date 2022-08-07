@@ -10,6 +10,7 @@ import NavBarLangDropDown from "./components/NavBarLangDropDown";
 import NavBarHamBurger from "./components/NavBarHamBurger";
 import NavBarLogo from "./components/NavBarLogo";
 
+// bg colors for navbar
 const variants = {
   closed: { padding: "0px 0px", backgroundColor: "#A2E333" },
   open: { padding: "10px 0px", backgroundColor: "#123333" },

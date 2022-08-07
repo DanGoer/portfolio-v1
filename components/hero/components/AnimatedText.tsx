@@ -14,9 +14,9 @@ const Wrapper = ({ children }: WrapperProps) => {
 
 // Map API "type" vaules to JSX tag names, "classNames" to css classes
 const tagMap: TagMapI = {
-  heading1: { type: "h1", classNames: "text-5xl pb-3" },
-  heading2: { type: "h2", classNames: "text-5xl pb-3" },
-  heading3: { type: "h3", classNames: "text-5xl pb-3" },
+  heading1: { type: "h1", classNames: "text-5xl md:text-7xl pb-3" },
+  heading2: { type: "h2", classNames: "text-5xl md:text-7xl pb-3" },
+  heading3: { type: "h3", classNames: "text-5xl md:text-7xl pb-3" },
 };
 
 // AnimatedCharacters

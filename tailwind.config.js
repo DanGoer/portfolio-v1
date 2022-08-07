@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         mint: "rgba(0, 255, 208, 0.6)",
-        navBefore: "",
+        navBefore: "#000",
         navBeforeOn: "",
         navBeforeHover: "",
         navAfter: "",

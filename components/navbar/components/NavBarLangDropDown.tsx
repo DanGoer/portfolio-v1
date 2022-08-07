@@ -31,6 +31,7 @@ const subMenuAnimate = {
 function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
   const { t } = useTranslation("navbar");
   const router = useRouter();
+  console.log(router.locale);
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
@@ -46,8 +47,10 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
           className="inline-block relative"
         >
           <button
-            className={`bg-gray-300/0 text-white border-white ${
-              scrollTarget === "hero" ? "" : ""
+            className={`${
+              scrollTarget === "hero"
+                ? "border-navBeforeOn text-navBeforeOn bg-buttonA"
+                : "border-navAfterOn text-navAfterOn bg-buttonB"
             } border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32`}
           >
             <span className="mr-1">{t("language-dropdown")}</span>
@@ -63,15 +66,16 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
             initial="exit"
             animate={isHover ? "enter" : "exit"}
             variants={subMenuAnimate}
-            className=" absolute hidden text-gray-700 pt-1"
+            className=" absolute hidden pt-1"
           >
-            <li className="">
+            <li>
               <Link passHref href="/" locale="en">
                 <button
-                  className={`${
-                    router.locale === "en" && "bg-red-400"
-                  } rounded-t bg-black/90 hover:bg-white hover:text-black text-white
-                 border-white border-2 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
+                  className={` ${
+                    router.locale === "en"
+                      ? "bg-container underline"
+                      : "bg-black/90 hover:bg-white hover:text-black text-white border-white"
+                  } rounded-t border-2 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
                 >
                   English
                 </button>
@@ -81,9 +85,11 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
               <Link passHref href="/" locale="de">
                 <button
                   className={`${
-                    router.locale === "de" && "bg-red-400"
-                  } rounded-b bg-black/90 hover:bg-white hover:text-black text-white
-                 border-white border-2 border-t-0 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
+                    router.locale === "de"
+                      ? "bg-container underline"
+                      : "bg-black/90 hover:bg-white hover:text-black text-white border-white"
+                  } rounded-b   
+                  border-2 border-t-0 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
                 >
                   Deutsch
                 </button>
