@@ -12,8 +12,8 @@ import NavBarLogo from "./components/NavBarLogo";
 
 // bg colors for navbar
 const variants = {
-  closed: { padding: "0px 0px", backgroundColor: "#A2E333" },
-  open: { padding: "10px 0px", backgroundColor: "#123333" },
+  closed: { padding: "0px 0px", backgroundColor: "#004a76" },
+  open: { padding: "10px 0px", backgroundColor: "#cee5ff" },
 };
 
 function NavBar({ scrollTarget }: { scrollTarget: string }) {

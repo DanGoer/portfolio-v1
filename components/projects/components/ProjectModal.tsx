@@ -88,10 +88,16 @@ function ProjectModal({ modal, setModal }: ModalI) {
                   }
                 }}
               />
-              <div onClick={() => paginate(-1)} className={`prev h-20 w-20`}>
+              <div
+                onClick={() => paginate(-1)}
+                className="prev h-20 w-20 bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+              >
                 {"‣"}
               </div>
-              <div onClick={() => paginate(1)} className={`next h-20 w-20`}>
+              <div
+                onClick={() => paginate(1)}
+                className="next h-20 w-20 bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+              >
                 {"‣"}
               </div>
             </motion.div>

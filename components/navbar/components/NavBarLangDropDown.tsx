@@ -49,8 +49,8 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
           <button
             className={`${
               scrollTarget === "hero"
-                ? "border-navBeforeOn text-navBeforeOn bg-buttonA"
-                : "border-navAfterOn text-navAfterOn bg-buttonB"
+                ? "border-navBeforeOn text-navBeforeOn"
+                : "border-navAfterOn text-navAfterOn"
             } border-2 font-semibold py-2 px-4 rounded inline-flex justify-center items-center w-32`}
           >
             <span className="mr-1">{t("language-dropdown")}</span>

@@ -5,7 +5,9 @@ function ContactButton({ text, isSubmitting }: ContactButtonI) {
     <button
       disabled={isSubmitting}
       type="submit"
-      className="text-buttonAOn duration-300 bg-buttonA hover:bg-buttonB hover:text-buttonBOn font-medium rounded-full text-lg px-10 py-2 text-center mr-2 mb-2"
+      className="border-buttonB text-buttonBOn duration-300
+       bg-buttonB hover:bg-buttonA hover:text-buttonAOn border-2
+       font-medium rounded-full text-lg px-10 py-2 text-center mr-2 mb-2"
     >
       {text}
     </button>

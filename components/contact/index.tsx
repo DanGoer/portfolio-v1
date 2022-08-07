@@ -50,7 +50,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id="contact" className="pt-48">
+        <section ref={ref} id="contact" className="pt-48 z-10 pb-32">
           <SectionTitle title={t("h2-contact")} />
           <motion.form
             initial={{ opacity: 0, y: 200 }}

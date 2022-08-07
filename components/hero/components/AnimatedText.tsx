@@ -32,7 +32,7 @@ const AnimatedText = ({ text, type }: AnimatedTextI) => {
     },
     visible: {
       y: 0,
-      color: "rgba(0, 255, 208, 0.6)",
+      color: "#001e2c",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.5 },
     },
   };

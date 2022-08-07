@@ -9,7 +9,7 @@ function HeroText() {
   const { t } = useTranslation("hero");
 
   return (
-    <div className="w-96 flex flex-col">
+    <div className="w-[320px] md:w-[720px] flex flex-col">
       <AnimatedText text={t("h1-hero")} type="heading1" />
       <AnimatedText text={heroData.name} type="heading2" />
       <AnimatedText text={t("h3-hero")} type="heading3" />

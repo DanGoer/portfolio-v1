@@ -73,10 +73,16 @@ function ProjectCarousel({ data, setModal }: CarouselI) {
           }}
         />
       </AnimatePresence>
-      <div className="next" onClick={() => paginate(1)}>
+      <div
+        className="next bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+        onClick={() => paginate(1)}
+      >
         {"‣"}
       </div>
-      <div className="prev" onClick={() => paginate(-1)}>
+      <div
+        className="prev bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+        onClick={() => paginate(-1)}
+      >
         {"‣"}
       </div>
     </>
