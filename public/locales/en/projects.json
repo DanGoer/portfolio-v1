@@ -1,10 +1,10 @@
 {
   "title-projects": "My Projects",
   "projects": [
-    "11Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
-    "22Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
-    "33Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
+    "Nasa Space App ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
+    "A personal Portfolio Page, which I created to showcase my skills and some of my Projects. I used Next.js with its static site generation for better UX and SEO. I choosed a minimalistic design and UI with some animations. Also I added translations and used TypeScript.",
+    "A classic weather app with some awesome features. One of the features is a graphical representation for the weather of the next 2 days. Another is th",
     "44Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
-    "55Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit."
+    "A fullstack app created to help people with food intolerances. It has an authentification system and "
   ]
 }

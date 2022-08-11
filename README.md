@@ -22,11 +22,11 @@ The intention was to create an App where I can display my projects, skills and e
 
 ## Technologies Used
 
-- Next - version 12.1.00
+- Next - version 12.2.4
 - Tailwind - version 3.0.23
-- next-i18next - version 10.5.0
+- next-i18next - version 11.3.0
 - react-intersection-observer - version 9.3.3
-- framer-motion - version 6.5.1
+- framer-motion - version 7.1.0
 
 For more informations check please package.JSON.
 
