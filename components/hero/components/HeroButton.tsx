@@ -14,8 +14,7 @@ function HeroButton() {
     <Link href="/#projects" passHref>
       <motion.button
         variants={item}
-        className="text-white border-2 border-gray-800 bg-gray-800 hover:bg-white hover:text-black font-medium rounded-full
-       text-lg px-10 py-2 text-center mr-2 mb-2 duration-300 mt-2"
+        className="px-10 py-2 mt-2 mb-2 mr-2 text-lg font-medium text-center text-white duration-300 bg-gray-800 border-2 border-gray-800 rounded-full hover:bg-white hover:text-black"
       >
         {t("button-hero")}
       </motion.button>

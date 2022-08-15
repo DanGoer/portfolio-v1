@@ -50,7 +50,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id="contact" className="pt-48 z-10 pb-32">
+        <section ref={ref} id="contact" className="z-10 pt-48 pb-32">
           <SectionTitle title={t("h2-contact")} />
           <motion.form
             initial={{ opacity: 0, y: 200 }}
@@ -58,10 +58,10 @@ function Contact({ handleSectionChange }: SectionChangeI) {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-4 md:p-12 rounded-xl shadow-lg bg-container"
+            className="flex flex-col items-center justify-center max-w-sm gap-4 p-4 mx-auto shadow-lg md:p-12 rounded-xl bg-container"
           >
             <ContactSubTitle subtitle={t("h3-contact")} />
-            <div className="w-full relative">
+            <div className="relative w-full">
               <input
                 id="name"
                 value={name}
@@ -74,7 +74,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
               />
               <label htmlFor="name">{t("input-name")}</label>
             </div>
-            <div className="w-full relative">
+            <div className="relative w-full">
               <input
                 id="email"
                 value={email}
@@ -87,11 +87,11 @@ function Contact({ handleSectionChange }: SectionChangeI) {
               />
               <label htmlFor="email">{t("input-email")}</label>
             </div>
-            <div className="w-full relative">
+            <div className="relative w-full">
               <textarea
                 id="message"
                 onChange={(e) => setMsg(e.target.value)}
-                className="peer h-96 pt-2 px-1"
+                className="px-1 pt-2 peer h-96"
                 placeholder={t("input-message")}
               />
               <label htmlFor="message">{t("input-message")}</label>
@@ -102,12 +102,12 @@ function Contact({ handleSectionChange }: SectionChangeI) {
             />
           </motion.form>
           {isSuccess ? (
-            <p className="mx-auto my-8 w-max text-xl text-textBgOn">
+            <p className="mx-auto my-8 text-xl w-max text-textBgOn">
               {t("success-contact")}
             </p>
           ) : (
             isError && (
-              <p className="mx-auto my-8 w-max text-xl text-red-500">
+              <p className="mx-auto my-8 text-xl text-red-500 w-max">
                 {t("error-contact")}
               </p>
             )

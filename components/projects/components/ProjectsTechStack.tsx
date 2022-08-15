@@ -9,7 +9,7 @@ function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
         return (
           <li
             key={icon.name}
-            className="w-12 md:w-20 flex justify-center items-center flex-col"
+            className="flex flex-col items-center justify-center w-12 md:w-20"
           >
             <Image
               className=""

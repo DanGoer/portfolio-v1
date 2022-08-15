@@ -1,10 +1,11 @@
+import { Trans } from "next-i18next";
 import { ProjectsInfoI } from "../../../types/interfaces";
 
 function ProjectsInfo({ text }: ProjectsInfoI) {
   return (
-    <pre>
-      <p className="py-2 px-2 text-lg whitespace-pre-line font-sans">{text}</p>
-    </pre>
+    <Trans i18nKey="projects">
+      <p className="px-2 py-2 font-sans text-lg whitespace-pre-line">{text}</p>
+    </Trans>
   );
 }
 

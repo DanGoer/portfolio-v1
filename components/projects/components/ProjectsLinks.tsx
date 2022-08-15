@@ -8,7 +8,7 @@ function ProjectsLinks({ livelink, github }: ProjectsLinksI) {
         type="button"
         target="_blank"
         rel="noreferrer"
-        className="border-buttonB border-2 hover:text-buttonAOn hover:bg-buttonA duration-300 bg-buttonB text-buttonBOn font-medium rounded-full text-lg px-10 py-2 text-center mr-2 mb-2"
+        className="px-10 py-2 mb-2 mr-2 text-lg font-medium text-center duration-300 border-2 rounded-full border-buttonB hover:text-buttonAOn hover:bg-buttonA bg-buttonB text-buttonBOn"
       >
         Live
       </a>
@@ -17,7 +17,7 @@ function ProjectsLinks({ livelink, github }: ProjectsLinksI) {
         type="button"
         target="_blank"
         rel="noreferrer"
-        className="border-buttonB border-2 text-buttonAOn bg-buttonA duration-300 hover:bg-buttonB hover:text-buttonBOn font-medium rounded-full text-lg px-10 py-2 text-center mr-2 mb-2"
+        className="px-10 py-2 mb-2 mr-2 text-lg font-medium text-center duration-300 border-2 rounded-full border-buttonB text-buttonAOn bg-buttonA hover:bg-buttonB hover:text-buttonBOn"
       >
         Code
       </a>

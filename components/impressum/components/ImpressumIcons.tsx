@@ -7,12 +7,12 @@ function ImpressumIcons() {
         return (
           <a key={icon.name} href={icon.link} target="_blank" rel="noreferrer">
             <svg
-              className="group block w-8 h-8 hover:cursor-pointer"
+              className="block w-8 h-8 group hover:cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
               viewBox={icon.viewBox}
             >
               <g
-                className="group-hover:fill-hoverEffect duration-300 fill-impressumOn"
+                className="duration-300 group-hover:fill-hoverEffect fill-impressumOn"
                 fill="#fff"
               >
                 <path d={icon.svg} />

@@ -45,7 +45,7 @@ function NavBarLink({
           ></motion.div>
 
           {/*<motion.div
-            className=" absolute w-full h-full bg-red-300"
+            className="absolute w-full h-full bg-red-300 "
             layoutId="selector"
           ></motion.div>*}
           {/*<motion.svg

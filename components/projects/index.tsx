@@ -27,7 +27,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
         <div
           ref={ref}
           id="projects"
-          className="gap-20 w-full flex flex-col items-center justify-start pt-48 text-center max-w-6xl relative"
+          className="relative flex flex-col items-center justify-start w-full max-w-6xl gap-20 pt-48 text-center"
         >
           <ProjectModal modal={modal} setModal={setModal} />
           <SectionTitle title={t("title-projects")} />
@@ -49,13 +49,13 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                       index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
                     } gap-4 bg-container text-containerOn shadow-lg rounded-xl border-solid p-2 lg:p-8`}
                   >
-                    <div className="lg:w-1/2 w-full max-h-full relative flex justify-center items-center h-96 lg:h-auto overflow-hidden grow">
+                    <div className="relative flex items-center justify-center w-full max-h-full overflow-hidden lg:w-1/2 h-96 lg:h-auto grow">
                       <ProjectCarousel
                         setModal={setModal}
                         data={projectContent[index].preview}
                       />
                     </div>
-                    <div className="flex flex-col justify-between lg:w-1/2 gap-8 ">
+                    <div className="flex flex-col justify-between gap-8 lg:w-1/2 ">
                       <ProjectsInfo text={text} />
                       <ProjectsTechStack
                         techstack={projectContent[index].techstack}

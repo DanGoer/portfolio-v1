@@ -10,7 +10,7 @@ function NavBarSocialIcons({ scrollTarget }: ScrollTargetI) {
         return (
           <Link key={icon.name} href={icon.link} passHref>
             <svg
-              className="group hidden xl:block w-8 h-8 hover:cursor-pointer"
+              className="hidden w-8 h-8 group xl:block hover:cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
               viewBox={icon.viewBox}
             >

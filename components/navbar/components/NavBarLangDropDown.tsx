@@ -44,7 +44,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
         <motion.div
           onHoverStart={toggleHoverMenu}
           onHoverEnd={toggleHoverMenu}
-          className="inline-block relative"
+          className="relative inline-block"
         >
           <button
             className={`${
@@ -55,7 +55,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
           >
             <span className="mr-1">{t("language-dropdown")}</span>
             <svg
-              className="fill-current h-4 w-4"
+              className="w-4 h-4 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -66,7 +66,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
             initial="exit"
             animate={isHover ? "enter" : "exit"}
             variants={subMenuAnimate}
-            className=" absolute hidden pt-1"
+            className="absolute hidden pt-1 "
           >
             <li>
               <Link passHref href="/" locale="en">

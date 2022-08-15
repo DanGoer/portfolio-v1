@@ -31,14 +31,14 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
       initial="open"
       variants={variants}
       animate={scrollTarget === "hero" ? "open" : "closed"}
-      className="z-30 w-screen px-4 fixed flex flex-col shadow items-center justify-between"
+      className="fixed z-30 flex flex-col items-center justify-between w-screen px-4 shadow"
     >
-      <nav className="flex flex-row justify-between items-center w-full px-2">
+      <nav className="flex flex-row items-center justify-between w-full px-2">
         <NavBarLogo scrollTarget={scrollTarget} />
         <NavBarSocialIcons scrollTarget={scrollTarget} />
         <span className="flex md:flex-row-reverse ">
           <NavBarLangDropDown scrollTarget={scrollTarget} />
-          <ul className="text-lg hidden md:flex md:flex-row gap-8 items-center">
+          <ul className="items-center hidden gap-8 text-lg md:flex md:flex-row">
             <NavBarLinks scrollTarget={scrollTarget} />
           </ul>
         </span>

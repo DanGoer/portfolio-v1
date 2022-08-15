@@ -53,7 +53,7 @@ function ProjectModal({ modal, setModal }: ModalI) {
         {modal.length > 0 && (
           <>
             <div
-              className="fixed w-screen inset-0 h-screen z-40"
+              className="fixed inset-0 z-40 w-screen h-screen"
               onClick={() => handleClose()}
             />
             <motion.div
@@ -90,13 +90,13 @@ function ProjectModal({ modal, setModal }: ModalI) {
               />
               <div
                 onClick={() => paginate(-1)}
-                className="prev h-20 w-20 bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+                className="w-20 h-20 prev bg-buttonB text-buttonBOn hover:bg-buttonB/70"
               >
                 {"‣"}
               </div>
               <div
                 onClick={() => paginate(1)}
-                className="next h-20 w-20 bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+                className="w-20 h-20 next bg-buttonB text-buttonBOn hover:bg-buttonB/70"
               >
                 {"‣"}
               </div>
