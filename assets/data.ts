@@ -76,7 +76,6 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Weather App",
-
     preview: [
       "port.jpg",
       "portrait.jpg",

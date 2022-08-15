@@ -5,7 +5,13 @@ function ImpressumIcons() {
     <span className="flex flex-row gap-6">
       {socialIconsList.map((icon) => {
         return (
-          <a key={icon.name} href={icon.link} target="_blank" rel="noreferrer">
+          <a
+            key={icon.name}
+            href={icon.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`link to ${icon.name}`}
+          >
             <svg
               className="block w-8 h-8 group hover:cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"

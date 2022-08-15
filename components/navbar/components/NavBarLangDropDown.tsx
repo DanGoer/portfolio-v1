@@ -31,7 +31,6 @@ const subMenuAnimate = {
 function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
   const { t } = useTranslation("navbar");
   const router = useRouter();
-  console.log(router.locale);
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {

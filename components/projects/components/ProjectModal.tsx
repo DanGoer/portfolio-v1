@@ -4,6 +4,7 @@ import { ModalI } from "../../../types/interfaces";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { wrap } from "popmotion";
+import Image from "next/image";
 
 const variants = {
   enter: (direction: number) => {
@@ -14,7 +15,7 @@ const variants = {
   },
 
   center: {
-    zIndex: 1,
+    zIndex: 50,
     x: 0,
     opacity: 1,
   },
@@ -57,36 +58,35 @@ function ProjectModal({ modal, setModal }: ModalI) {
               onClick={() => handleClose()}
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed left-0 top-20 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-impressum z-50 flex items-center justify-center overflow-hidden"
+              className="fixed left-0 top-20 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-impressum z-50  items-center justify-center overflow-hidden"
+              key={modal[imageIndex]}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 200, damping: 30 },
+                opacity: { duration: 0.3 },
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
             >
-              <motion.img
-                key={modal[imageIndex]}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 200, damping: 30 },
-                  opacity: { duration: 0.3 },
-                }}
+              <Image
                 src={"/projects/" + modal[imageIndex]}
                 alt="project modal slider"
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
-
-                  if (swipe < -swipeConfidenceThreshold) {
-                    paginate(1);
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    paginate(-1);
-                  }
-                }}
+                layout="fill"
+                objectFit="contain"
               />
               <div
                 onClick={() => paginate(-1)}

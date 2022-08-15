@@ -13,8 +13,7 @@ import Hero from "../components/hero";
 import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
 
-//todo: distance between sections, logo, text formatting and text,
-// custom colors for hero and navbar, where on page icon ,language drop down color change
+//todo: distance between sections, text formatting and text, fix image modal for projects
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");

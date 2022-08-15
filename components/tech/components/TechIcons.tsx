@@ -20,8 +20,8 @@ function TechIcons() {
             <Image
               src={`/tech-icons/${icon.svg}`}
               alt="tech-icon"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
             />
             <h3 className="mt-2 text-base font-semibold lg:text-xl">
               {icon.name}

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { socialIconsList } from "../../../assets/data";
 import { ScrollTargetI } from "../../../types/interfaces";
 
@@ -8,7 +6,11 @@ function NavBarSocialIcons({ scrollTarget }: ScrollTargetI) {
     <span className="flex flex-row gap-6">
       {socialIconsList.map((icon) => {
         return (
-          <Link key={icon.name} href={icon.link} passHref>
+          <a
+            key={icon.name}
+            aria-label={`link to ${icon.name}`}
+            href={icon.link}
+          >
             <svg
               className="hidden w-8 h-8 group xl:block hover:cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +27,7 @@ function NavBarSocialIcons({ scrollTarget }: ScrollTargetI) {
                 <path d={icon.svg} />
               </g>
             </svg>
-          </Link>
+          </a>
         );
       })}
     </span>

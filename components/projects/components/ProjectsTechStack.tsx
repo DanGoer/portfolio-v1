@@ -12,11 +12,10 @@ function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
             className="flex flex-col items-center justify-center w-12 md:w-20"
           >
             <Image
-              className=""
               src={`/tech-icons/${icon.svg}`}
               alt="tech-icon"
-              height="100"
-              width="100"
+              height={100}
+              width={100}
             />
             <p>{icon.name}</p>
           </li>

@@ -4,7 +4,9 @@ import { ProjectsInfoI } from "../../../types/interfaces";
 function ProjectsInfo({ text }: ProjectsInfoI) {
   return (
     <Trans i18nKey="projects">
-      <p className="px-2 py-2 font-sans text-lg whitespace-pre-line">{text}</p>
+      <p className="px-2 py-2 font-sans text-lg text-justify whitespace-pre-line">
+        {text}
+      </p>
     </Trans>
   );
 }

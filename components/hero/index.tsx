@@ -45,6 +45,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
             <HeroButton />
           </motion.div>
           <a
+            aria-label="scroll to tech section"
             href="#tech"
             className="absolute px-3 py-1 transition-all duration-300 border-2 rounded-full bottom-8 left-1/2 border-textBgOn group hover:border-hoverEffect bg-container hover:bg-textBgOn"
           >

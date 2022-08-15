@@ -3,7 +3,7 @@ import { ScrollTargetI } from "../../../types/interfaces";
 
 function NavBarLogo({ scrollTarget }: ScrollTargetI) {
   return (
-    <a href="#hero">
+    <a href="#hero" aria-label="to top of the page">
       <svg
         id="ad135c08-350c-42e3-9120-ef28cc481eb1"
         data-name="Layer 1"

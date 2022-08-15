@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { CarouselI } from "../../../types/interfaces";
+import Image from "next/image";
 
 const variants = {
   enter: (direction: number) => {
@@ -44,12 +45,10 @@ function ProjectCarousel({ data, setModal }: CarouselI) {
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
+        <motion.div
           key={page}
           onClick={() => setModal(data)}
-          className="absolute max-w-full lg:max-h-full max-h-96 cursor-zoom-in"
-          src={"/projects/" + data[imageIndex]}
-          alt="project carousel"
+          className="absolute w-full h-full max-w-full lg:max-h-full max-h-96 cursor-zoom-in"
           custom={direction}
           variants={variants}
           initial="enter"
@@ -71,7 +70,14 @@ function ProjectCarousel({ data, setModal }: CarouselI) {
               paginate(-1);
             }
           }}
-        />
+        >
+          <Image
+            src={"/projects/" + data[imageIndex]}
+            alt="project carousel"
+            layout="fill"
+            objectFit="contain"
+          />
+        </motion.div>
       </AnimatePresence>
       <div
         className="next bg-buttonB text-buttonBOn hover:bg-buttonB/70"
