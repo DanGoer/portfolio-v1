@@ -7,15 +7,14 @@ function ProjectsTechStack({ techstack }: ProjectsTechStackI) {
     <ul className="flex flex-row flex-wrap justify-center gap-8 p-4">
       {techstack.map((icon) => {
         return (
-          <li
-            key={icon.name}
-            className="flex flex-col items-center justify-center w-12 md:w-20"
-          >
+          <li key={icon.name} className="block w-12 md:w-20">
             <Image
               src={`/tech-icons/${icon.svg}`}
               alt="tech-icon"
-              height={100}
+              layout="responsive"
               width={100}
+              height={100}
+              sizes="(min-width: 768px) 80px, 60px"
             />
             <p>{icon.name}</p>
           </li>

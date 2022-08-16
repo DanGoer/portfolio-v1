@@ -43,7 +43,7 @@
 
   .next,
   .prev {
-    top: calc(50% - 20px);
+    top: calc(50% + 150px);
     position: absolute;
     border-radius: 50%;
     width: 40px;
@@ -55,7 +55,11 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
-    z-index: 2;
+  }
+
+  .next-fs,
+  .prev-fs {
+    top: calc(50% - 20px);
   }
 
   .next {
@@ -65,5 +69,21 @@
   .prev {
     left: 10px;
     transform: scale(-1);
+  }
+
+  .exit {
+    top: calc(10% - 20px);
+    right: 10px;
+    position: fixed;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
   }
 }

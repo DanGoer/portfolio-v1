@@ -47,7 +47,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                     viewport={{ once: true }}
                     className={`flex flex-col ${
                       index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
-                    } gap-4 bg-container text-containerOn shadow-lg rounded-xl border-solid p-2 lg:p-8`}
+                    } gap-4 bg-container text-containerOn shadow-lg rounded-xl border-solid p-2 lg:p-8 z-10`}
                   >
                     <div className="relative flex items-center justify-center w-full max-h-full overflow-hidden lg:w-1/2 h-96 lg:h-auto grow">
                       <ProjectCarousel

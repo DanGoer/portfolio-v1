@@ -53,12 +53,8 @@ function ProjectModal({ modal, setModal }: ModalI) {
       <AnimatePresence>
         {modal.length > 0 && (
           <>
-            <div
-              className="fixed inset-0 z-40 w-screen h-screen"
-              onClick={() => handleClose()}
-            />
             <motion.div
-              className="fixed left-0 top-20 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-impressum z-50  items-center justify-center overflow-hidden"
+              className="fixed left-0 top-32 w-screen h-[60vh] md:inset-20 md:w-[90vw] md:h-[80vh] lg:top-40 bg-container z-50  items-center justify-center overflow-hidden"
               key={modal[imageIndex]}
               custom={direction}
               variants={variants}
@@ -88,22 +84,36 @@ function ProjectModal({ modal, setModal }: ModalI) {
                 layout="fill"
                 objectFit="contain"
               />
-              <div
-                onClick={() => paginate(-1)}
-                className="w-20 h-20 prev bg-buttonB text-buttonBOn hover:bg-buttonB/70"
-              >
-                {"‣"}
-              </div>
-              <div
-                onClick={() => paginate(1)}
-                className="w-20 h-20 next bg-buttonB text-buttonBOn hover:bg-buttonB/70"
-              >
-                {"‣"}
-              </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
+      {modal.length > 0 && (
+        <>
+          <div
+            className="fixed inset-0 z-40 w-screen h-screen"
+            onClick={() => handleClose()}
+          />
+          <button
+            onClick={() => paginate(-1)}
+            className="fixed z-50 w-20 h-20 prev md:prev-fs bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+          >
+            {"‣"}
+          </button>
+          <button
+            onClick={() => paginate(1)}
+            className="fixed z-50 w-20 h-20 next md:next-fs bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+          >
+            {"‣"}
+          </button>
+          <button
+            onClick={() => handleClose()}
+            className="fixed z-50 w-20 h-20 exit bg-buttonB text-buttonBOn hover:bg-buttonB/70"
+          >
+            X
+          </button>
+        </>
+      )}
     </>
   );
 }

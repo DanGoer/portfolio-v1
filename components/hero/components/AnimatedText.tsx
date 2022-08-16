@@ -39,7 +39,7 @@ const AnimatedText = ({ text, type }: AnimatedTextI) => {
 
   const splitWords = text.split(" ");
 
-  const words: [] = [];
+  const words: string[][] = [];
 
   for (const [, item] of splitWords.entries()) {
     words.push(item.split(""));
@@ -51,8 +51,8 @@ const AnimatedText = ({ text, type }: AnimatedTextI) => {
   });
 
   // Get the tag name from tagMap
-  const Tag = tagMap[type].type;
-  const Classes = tagMap[type].classNames;
+  const Tag = (tagMap as any)[type].type;
+  const Classes = (tagMap as any)[type].classNames;
 
   return (
     <Tag>

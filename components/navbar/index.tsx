@@ -50,7 +50,7 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
       </nav>
       <ul
         className={`mt-0 overflow-hidden md:hidden ease-in-out flex flex-col gap-6 items-center transition-all duration-500   	   
-				${isOpen ? "h-64  py-8" : "h-0 py-0"}`}
+				${isOpen ? "h-80  py-8" : "h-0 py-0"}`}
       >
         <NavBarLinks scrollTarget={scrollTarget} toggleNav={toggleNav} />
       </ul>

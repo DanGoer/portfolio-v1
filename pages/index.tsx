@@ -13,7 +13,7 @@ import Hero from "../components/hero";
 import NavBar from "../components/navbar/index";
 import Tech from "../components/tech";
 
-//todo: distance between sections, text formatting and text, fix image modal for projects
+//todo: distance between sections, text formatting and text
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
@@ -54,7 +54,7 @@ const Home: NextPage = (props) => {
   );
 };
 
-export const getStaticProps = async ({ locale }: { locale: string }) => ({
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
       "common",
