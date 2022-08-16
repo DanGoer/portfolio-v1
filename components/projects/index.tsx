@@ -35,7 +35,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
             .split("+")
             .map((text, index) => {
               return (
-                <div key={index}>
+                <article key={index}>
                   <ProjectsTitle
                     livelink={projectContent[index].livelink}
                     title={projectContent[index].title}
@@ -66,7 +66,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                       />
                     </div>
                   </motion.div>
-                </div>
+                </article>
               );
             })}
         </div>

@@ -2,11 +2,11 @@ import { impressumData } from "../../../assets/data";
 
 function ImpressumContact() {
   return (
-    <p className="text-lg">
+    <address className="text-lg">
       {impressumData.contact.tel}
       <br />
       {impressumData.contact.email}
-    </p>
+    </address>
   );
 }
 

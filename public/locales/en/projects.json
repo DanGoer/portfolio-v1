@@ -2,8 +2,8 @@
   "title-projects": "My Projects",
   "projects": [
     "Nasa Space App ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
-    "A personal Portfolio Page, which I created to showcase my skills and some of my Projects. I used Next.js with its static site generation for better UX and SEO. I choosed a minimalistic design and UI with some animations. Also I added translations and used TypeScript.",
-    "A classic weather app with some awesome features. One of the features is a graphical representation for the weather of the next 2 days. Another is th",
+    "My personal Portfolio website, created to server as a display for my projects. On my portfolio you will find all relevant information about me and my projects. The Information on the projects is presented with detailed information in a minimalistic style full of design. This includes:\n\n- An Opimized webapp with the best possible ratings\n- Stylish animations\n -A feature-rich webapp with many features",
+    "My personal interpretation and respresentation of the data from openweatherapi.com. With the help of Next.js and Tailwind i created a detailed and responsive web app.\n\n- Graphical representation of weather data over a peroid of time\n- Comprehensive preview and forecast for the weather\n- Detailed and site-specific query-based weather information",
     "44Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempore nisi quis, esse, totam ullam porro optio doloremque possimus numquam rem, rerum repellendus! Minus et esse natus dolore dolorem? Hic quia esse ut saepe tenetur velit veniam est unde? Recusandae aspernatur fuga voluptas ratione ut eaque, quis nostrum pariatur velit.",
     "A fullstack app created to help people with food intolerances. It has an authentification system and "
   ]
