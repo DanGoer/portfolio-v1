@@ -12,6 +12,7 @@ function HeroText() {
     <div className="w-[320px] md:w-[680px] flex flex-col">
       <AnimatedText text={t("h1-hero")} type="heading1" />
       <AnimatedText text={heroData.name} type="heading2" />
+      <AnimatedText text={t("h2-hero")} type="heading2" />
       <AnimatedText text={t("h3-hero")} type="heading3" />
     </div>
   );

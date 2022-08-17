@@ -39,6 +39,11 @@
     transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
   }
 
+  p > strong {
+    color: green;
+    font-style: italic;
+  }
+
   /* label and input settings end*/
 
   .next,

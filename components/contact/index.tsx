@@ -48,7 +48,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
   };
 
   return (
-    <InView threshold={0.5} onChange={handleSectionChange}>
+    <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id="contact" className="z-10 pt-48 pb-32">
           <SectionTitle title={t("h2-contact")} />

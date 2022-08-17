@@ -14,7 +14,7 @@ import ImpressumTitle from "./components/ImpressumTitle";
 function Impressum({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("impressum");
   return (
-    <InView threshold={0.5} onChange={handleSectionChange}>
+    <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (
         <footer
           ref={ref}
