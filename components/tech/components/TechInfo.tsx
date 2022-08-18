@@ -1,6 +1,6 @@
 function TechInfo() {
   return (
-    <span>
+    <div>
       <h2 className="my-4">About Myself</h2>
       <p>
         I am a self thaught WebDev, who loves challenges. <br />
@@ -10,7 +10,7 @@ function TechInfo() {
         similique labore dolores molestiae. Praesentium consequatur quasi eos
         eligendi unde quia! Vero excepturi ducimus quasi eos id hic nam odit!
       </p>
-    </span>
+    </div>
   );
 }
 

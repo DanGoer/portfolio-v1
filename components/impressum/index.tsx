@@ -22,14 +22,14 @@ function Impressum({ handleSectionChange }: SectionChangeI) {
           className="flex flex-col items-center w-full gap-8 py-8 transition-all duration-300 bg-impressum/90 text-impressumOn"
         >
           <ImpressumTitle />
-          <span className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <ImpressumSubtitle subtitle={t("paragraph-impressum")} />
             <ImpressumInfo />
-          </span>
-          <span className="flex flex-col gap-4">
+          </div>
+          <div className="flex flex-col gap-4">
             <ImpressumSubtitle subtitle={t("contact-impressum")} />
             <ImpressumContact />
-          </span>
+          </div>
           <ImpressumIcons />
         </footer>
       )}

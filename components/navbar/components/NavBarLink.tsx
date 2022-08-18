@@ -39,7 +39,7 @@ function NavBarLink({
       </motion.a>
       {active && (
         <motion.div
-          transition={{ delay: 0.15 }}
+          transition={{ delay: 0.2 }}
           className="w-full h-1 bg-white rounded-full"
           layoutId="selector"
         ></motion.div>

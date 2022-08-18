@@ -69,7 +69,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
           >
             <li>
               <Link passHref href="/" locale="en">
-                <button
+                <a
                   className={` ${
                     router.locale === "en"
                       ? "bg-container underline"
@@ -77,12 +77,12 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
                   } rounded-t border-2 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
                 >
                   English
-                </button>
+                </a>
               </Link>
             </li>
             <li className="">
               <Link passHref href="/" locale="de">
-                <button
+                <a
                   className={`${
                     router.locale === "de"
                       ? "bg-container underline"
@@ -91,7 +91,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
                   border-2 border-t-0 py-2 px-4 w-32 flex justify-center transition-all duration-500`}
                 >
                   Deutsch
-                </button>
+                </a>
               </Link>
             </li>
           </motion.ul>

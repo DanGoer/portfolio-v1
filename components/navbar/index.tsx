@@ -36,12 +36,12 @@ function NavBar({ scrollTarget }: { scrollTarget: string }) {
       <nav className="flex flex-row items-center justify-between w-full px-2">
         <NavBarLogo scrollTarget={scrollTarget} />
         <NavBarSocialIcons scrollTarget={scrollTarget} />
-        <span className="flex md:flex-row-reverse ">
+        <div className="flex md:flex-row-reverse ">
           <NavBarLangDropDown scrollTarget={scrollTarget} />
           <ul className="items-center hidden gap-8 text-lg md:flex md:flex-row">
             <NavBarLinks scrollTarget={scrollTarget} />
           </ul>
-        </span>
+        </div>
         <NavBarHamBurger
           isOpen={isOpen}
           setIsOpen={setIsOpen}
