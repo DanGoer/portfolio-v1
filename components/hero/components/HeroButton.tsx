@@ -9,7 +9,8 @@ const item = {
 };
 
 function HeroButton() {
-  const { t } = useTranslation("hero");
+  const { t } = useTranslation("common");
+
   return (
     <Link href="/#projects" passHref>
       <motion.a

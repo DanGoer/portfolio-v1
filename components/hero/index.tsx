@@ -23,7 +23,7 @@ const item = {
 };
 
 function Hero({ handleSectionChange }: SectionChangeI) {
-  const { t } = useTranslation("hero");
+  const { t } = useTranslation("common");
 
   return (
     <InView threshold={0.8} onChange={handleSectionChange}>
@@ -40,7 +40,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
               variants={item}
               className="text-2xl font-medium max-w-[320px] md:max-w-[720px]"
             >
-              {t("p-1-hero")}
+              {t("p-hero")}
             </motion.p>
             <HeroButton />
           </motion.div>

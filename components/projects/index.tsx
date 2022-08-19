@@ -22,7 +22,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
   const [modal, setModal] = useState<string[]>([]);
 
   return (
-    <InView threshold={0.2} onChange={handleSectionChange}>
+    <InView threshold={0.1} onChange={handleSectionChange}>
       {({ ref }) => (
         <div
           ref={ref}

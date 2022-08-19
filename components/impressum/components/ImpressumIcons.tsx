@@ -9,7 +9,7 @@ function ImpressumIcons() {
             key={icon.name}
             href={icon.link}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label={`link to ${icon.name}`}
           >
             <svg

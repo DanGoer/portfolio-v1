@@ -16,7 +16,6 @@ const Wrapper = ({ children }: WrapperProps) => {
 const tagMap: TagMapI = {
   heading1: { type: "h1", classNames: "text-5xl md:text-7xl pb-3" },
   heading2: { type: "h2", classNames: "text-5xl md:text-7xl pb-3" },
-  heading3: { type: "h3", classNames: "text-5xl md:text-7xl pb-3" },
 };
 
 // AnimatedCharacters

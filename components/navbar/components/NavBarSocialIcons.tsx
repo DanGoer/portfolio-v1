@@ -7,6 +7,8 @@ function NavBarSocialIcons({ scrollTarget }: ScrollTargetI) {
       {socialIconsList.map((icon) => {
         return (
           <a
+            target="_blank"
+            rel="noopener noreferrer"
             key={icon.name}
             aria-label={`link to ${icon.name}`}
             href={icon.link}

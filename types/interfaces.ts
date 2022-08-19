@@ -114,7 +114,6 @@ export interface AnimatedTextI {
 export interface TagMapI {
   [heading1: string]: { type: string; classNames: string };
   heading2: { type: string; classNames: string };
-  heading3: { type: string; classNames: string };
 }
 
 export type WrapperProps = {

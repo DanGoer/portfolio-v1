@@ -1,8 +1,6 @@
 {
-  "h1": "Ein einfaches Beispiel",
-  "change-locale": "Wechseln Locale",
-  "to-second-page": "Zur zweiten Seite",
-  "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
-  "error-without-status": "Auf dem Server ist ein Fehler aufgetreten",
-  "title": "Hauptseite | next-i18next"
+  "h1-hero": "Hallo zusammen, ich bin",
+  "h2-hero": "Front-End-Entwickler",
+  "p-hero": "Ich liebe Herausforderungen und Möglichkeiten. Bitte genießen Sie meine Werke und entdecken Sie einige meiner Kunstwerke.",
+  "button-hero": "Meine Werke"
 }

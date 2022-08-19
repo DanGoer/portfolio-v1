@@ -14,12 +14,12 @@ import ImpressumTitle from "./components/ImpressumTitle";
 function Impressum({ handleSectionChange }: SectionChangeI) {
   const { t } = useTranslation("impressum");
   return (
-    <InView threshold={0.1} onChange={handleSectionChange}>
+    <InView threshold={0.15} onChange={handleSectionChange}>
       {({ ref }) => (
         <footer
           ref={ref}
           id="impressum"
-          className="flex flex-col items-center w-full gap-8 py-8 transition-all duration-300 bg-impressum/90 text-impressumOn"
+          className="z-10 flex flex-col items-center w-full gap-8 py-8 transition-all duration-300 bg-impressum/90 text-impressumOn"
         >
           <ImpressumTitle />
           <div className="flex flex-col gap-4">
