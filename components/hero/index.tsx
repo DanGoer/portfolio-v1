@@ -38,7 +38,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
             <HeroText />
             <motion.p
               variants={item}
-              className="text-2xl font-medium max-w-[320px] md:max-w-[720px] bg-black/60 px-4 py-2 text-white"
+              className="text-2xl font-medium max-w-[320px] md:max-w-[720px] bg-black/60 px-4 py-2 text-white rounded-md"
             >
               {t("p-hero")}
             </motion.p>

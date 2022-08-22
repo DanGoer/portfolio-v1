@@ -77,11 +77,10 @@ export const projectContent: ProjectsI[] = [
   {
     title: "Weather App",
     preview: [
-      "port.jpg",
-      "portrait.jpg",
-      "port.jpg",
-      "portrait.jpg",
-      "port.jpg",
+      "weather-head.jpg",
+      "weather-graph.jpg",
+      "weather-nextdays.jpg",
+      "weather-mobile.jpg",
     ],
     livelink: "https://github.com/",
     github: "https://github.com/",

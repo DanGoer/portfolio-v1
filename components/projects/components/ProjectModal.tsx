@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { ModalI } from "../../../types/interfaces";
 
@@ -47,6 +47,26 @@ function ProjectModal({ modal, setModal }: ModalI) {
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
+
+  useEffect(() => {
+    function handleEscapeKey(event: KeyboardEvent) {
+      if (event.code === "Escape") {
+        handleClose();
+      }
+
+      if (event.code === "ArrowLeft") {
+        paginate(-1);
+      }
+
+      if (event.code === "ArrowRight") {
+        paginate(1);
+      }
+    }
+
+    document.addEventListener("keydown", handleEscapeKey);
+
+    return () => document.removeEventListener("keydown", handleEscapeKey);
+  }, [handleClose]);
 
   return (
     <>
