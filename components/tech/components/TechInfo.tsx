@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 
 function TechInfo() {
-  const { t } = useTranslation("projects");
+  const { t } = useTranslation("tech");
   return (
     <div>
       <h2 className="my-4">{t("h2-tech")}</h2>

@@ -30,7 +30,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
       {({ ref }) => (
         <section ref={ref} id="hero" className="relative w-full h-screen">
           <motion.div
-            className="absolute flex flex-col text-left left-1/4 top-1/4 "
+            className="absolute flex flex-col text-left left-8 top-32 lg:left-1/4 md:top-1/4 "
             initial="hidden"
             animate="visible"
             variants={container}
@@ -38,7 +38,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
             <HeroText />
             <motion.p
               variants={item}
-              className="text-2xl font-medium max-w-[320px] md:max-w-[720px]"
+              className="text-2xl font-medium max-w-[320px] md:max-w-[720px] bg-black/60 px-4 py-2 text-white"
             >
               {t("p-hero")}
             </motion.p>
@@ -47,7 +47,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
           <a
             aria-label="scroll to tech section"
             href="#tech"
-            className="absolute px-3 py-1 transition-all duration-300 border-2 rounded-full bottom-8 left-1/2 border-textBgOn group hover:border-hoverEffect bg-container hover:bg-textBgOn"
+            className="absolute flex items-center justify-center w-16 py-1 transition-all duration-300 -translate-x-1/2 border-2 rounded-full test123 left-1/2 bottom-8 border-textBgOn group hover:border-hoverEffect bg-container hover:bg-textBgOn"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

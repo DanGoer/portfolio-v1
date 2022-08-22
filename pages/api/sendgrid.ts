@@ -14,7 +14,7 @@ export default async function handler(
   const message: string = req.body.message;
 
   const msg = {
-    to: "danielgoer1983@gmail.com",
+    to: "danielgoe1983@gmail.com",
     from: sender,
     subject: `Du hast eine Nachricht von ${name} erhalten!`,
     text: "message",

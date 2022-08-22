@@ -14,8 +14,8 @@ const Wrapper = ({ children }: WrapperProps) => {
 
 // Map API "type" vaules to JSX tag names, "classNames" to css classes
 const tagMap: TagMapI = {
-  heading1: { type: "h1", classNames: "text-5xl md:text-7xl pb-3" },
-  heading2: { type: "h2", classNames: "text-5xl md:text-7xl pb-3" },
+  heading1: { type: "h1", classNames: "text-4xl lg:text-7xl pb-3" },
+  heading2: { type: "h2", classNames: "text-4xl lg:text-7xl pb-3" },
 };
 
 // AnimatedCharacters
@@ -61,13 +61,7 @@ const AnimatedText = ({ text, type }: AnimatedTextI) => {
           <Wrapper key={index}>
             {words[index].flat().map((element: string, index: number) => {
               return (
-                <span
-                  style={{
-                    overflow: "hidden",
-                    display: "inline-block",
-                  }}
-                  key={index}
-                >
+                <span className="inline-block overflow-hidden" key={index}>
                   <motion.span
                     style={{ display: "inline-block" }}
                     variants={item}

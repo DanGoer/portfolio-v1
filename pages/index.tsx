@@ -30,7 +30,7 @@ const Home: NextPage = (props) => {
   return (
     <>
       <NavBar scrollTarget={scrollTarget} />
-      <main className="flex flex-col items-center justify-start text-center">
+      <main className="flex flex-col items-center justify-start w-full text-center">
         <div className="fixed w-screen h-screen gap-2 bg-center bg-cover bg-hero" />
         <Hero handleSectionChange={handleSectionChange} />
         <AnimatePresence>

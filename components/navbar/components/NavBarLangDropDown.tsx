@@ -42,6 +42,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
       <div className="px-10">
         <motion.div
           onHoverStart={toggleHoverMenu}
+          onTouchStart={toggleHoverMenu}
           onHoverEnd={toggleHoverMenu}
           className="relative inline-block"
         >
