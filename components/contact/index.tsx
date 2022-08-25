@@ -90,6 +90,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
             <div className="relative w-full">
               <textarea
                 id="message"
+                value={msg}
                 onChange={(e) => setMsg(e.target.value)}
                 className="px-1 pt-2 peer h-96"
                 placeholder={t("input-message")}

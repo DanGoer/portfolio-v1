@@ -15,6 +15,8 @@ import Tech from "../components/tech";
 
 //todo: distance between sections, text formatting and text
 
+// change texts: self taught german?, best möglichsten bewertungen?
+
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
 
