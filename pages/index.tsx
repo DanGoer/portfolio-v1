@@ -29,11 +29,21 @@ const Home: NextPage = (props) => {
     }
   };
 
+  //solution= different delays?
+
   return (
     <>
       <NavBar scrollTarget={scrollTarget} />
       <main className="flex flex-col items-center justify-start w-full text-center">
-        <div className="fixed w-screen h-screen gap-2 bg-center bg-cover bg-hero" />
+        <div
+          className={`fixed w-screen h-screen gap-2 ${
+            scrollTarget === "contact" ||
+            scrollTarget === "impressum" ||
+            scrollTarget === "projects"
+              ? "rotate-180"
+              : ""
+          } bg-center bg-cover bg-hero delay-1000`}
+        />
         <Hero handleSectionChange={handleSectionChange} />
         <AnimatePresence>
           {(scrollTarget === "projects" || scrollTarget === "tech") && (

@@ -21,8 +21,8 @@ module.exports = {
         buttonB: "#004d66",
         buttonBOn: "#c0e8ff",
         textBgOn: "#001e2c",
-        impressum: "#dce3e9",
-        impressumOn: "#40484c",
+        impressum: "rgb(0 0 0 / 0.6)",
+        impressumOn: "#fff",
         hoverEffect: "#71787d",
       },
       backgroundImage: {
