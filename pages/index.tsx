@@ -61,7 +61,6 @@ export const getServerSideProps = async ({ locale }: { locale: string }) => ({
       "common",
       "tech",
       "navbar",
-      "hero",
       "projects",
       "contact",
       "impressum",
