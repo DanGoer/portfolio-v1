@@ -1,10 +1,10 @@
 // Main page
 
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 
 import Projects from "../components/projects";
 import Contact from "../components/contact";
@@ -19,6 +19,19 @@ import Tech from "../components/tech";
 
 const Home: NextPage = (props) => {
   const [scrollTarget, setScrollTarget] = useState<string>("hero");
+  const [scrollH, setScrollH] = useState<boolean>(false);
+
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      if (latest >= 3600) {
+        setScrollH(true);
+      } else {
+        setScrollH(false);
+      }
+    });
+  }, []);
 
   const handleSectionChange = (
     inView: boolean,
@@ -35,14 +48,10 @@ const Home: NextPage = (props) => {
     <>
       <NavBar scrollTarget={scrollTarget} />
       <main className="flex flex-col items-center justify-start w-full text-center">
-        <div
-          className={`fixed w-screen h-screen gap-2 ${
-            scrollTarget === "contact" ||
-            scrollTarget === "impressum" ||
-            scrollTarget === "projects"
-              ? "rotate-180"
-              : ""
-          } bg-center bg-cover bg-hero delay-1000`}
+        <motion.div
+          className={`fixed w-screen ${
+            scrollH === true ? "rotate-180" : ""
+          } h-screen gap-2 bg-center bg-cover bg-hero`}
         />
         <Hero handleSectionChange={handleSectionChange} />
         <AnimatePresence>
