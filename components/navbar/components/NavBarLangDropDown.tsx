@@ -75,7 +75,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
                     router.locale === "en"
                       ? " underline text-white "
                       : "hover:bg-white hover:text-black"
-                  } rounded-b bg-black/60 border-white text-white
+                  } rounded-b bg-black/80 border-white text-white
                   border-2 border-t-0 py-2 px-4 w-32 grid grid-cols-4 justify-center transition-all duration-500 items-center gap-2`}
                 >
                   {router.locale === "en" && (
@@ -98,7 +98,7 @@ function NavBarLangDropDown({ scrollTarget }: ScrollTargetI) {
                     router.locale === "de"
                       ? " underline text-white "
                       : "hover:bg-white hover:text-black"
-                  } rounded-b bg-black/60 border-white text-white
+                  } rounded-b bg-black/80 border-white text-white
                   border-2 border-t-0 py-2 px-4 w-32 grid grid-cols-4 justify-center transition-all duration-500 items-center gap-2`}
                 >
                   {router.locale === "de" && (

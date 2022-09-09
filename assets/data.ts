@@ -49,19 +49,6 @@ export const socialIconsList: SocialIconsI[] = [
 // content for projects
 export const projectContent: ProjectsI[] = [
   {
-    title: "Nasa Space Playground",
-    preview: ["portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
-    livelink: "https://github.com/",
-    github: "https://github.com/",
-    techstack: [
-      { name: "TypeScript", svg: "typescript.svg" },
-      { name: "React", svg: "react.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
-      { name: "Framer Motion", svg: "motion.svg" },
-      { name: "i18next", svg: "i18next.svg" },
-    ],
-  },
-  {
     title: "Portfolio",
     preview: ["neu.JPG", "portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
     livelink: "https://github.com/",
@@ -72,23 +59,6 @@ export const projectContent: ProjectsI[] = [
       { name: "TailwindCSS", svg: "tailwindcss.svg" },
       { name: "i18next", svg: "i18next.svg" },
       { name: "Framer Motion", svg: "motion.svg" },
-    ],
-  },
-  {
-    title: "Weather App",
-    preview: [
-      "weather-head.jpg",
-      "weather-graph.jpg",
-      "weather-nextdays.jpg",
-      "weather-mobile.jpg",
-    ],
-    livelink: "https://github.com/",
-    github: "https://github.com/",
-    techstack: [
-      { name: "JavaScript", svg: "javascript.svg" },
-      { name: "Next.js", svg: "nextjs.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
-      { name: "d3", svg: "d3.svg" },
     ],
   },
   {
@@ -122,6 +92,23 @@ export const projectContent: ProjectsI[] = [
       { name: "Sequelize", svg: "sequelizejs.svg" },
       { name: "Express.js", svg: "express.svg" },
       { name: "Framer Motion", svg: "motion.svg" },
+    ],
+  },
+  {
+    title: "Weather App",
+    preview: [
+      "weather-head.jpg",
+      "weather-graph.jpg",
+      "weather-nextdays.jpg",
+      "weather-mobile.jpg",
+    ],
+    livelink: "https://github.com/",
+    github: "https://github.com/",
+    techstack: [
+      { name: "JavaScript", svg: "javascript.svg" },
+      { name: "Next.js", svg: "nextjs.svg" },
+      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "d3", svg: "d3.svg" },
     ],
   },
 ];

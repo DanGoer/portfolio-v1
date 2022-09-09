@@ -7,6 +7,7 @@ function NavBarHamBurger({ isOpen, setIsOpen, scrollTarget }: NavBarBurger) {
 
   return (
     <button
+      aria-label="NavBar hamburger menu button"
       className={`md:hidden flex flex-col h-12 w-12 border-2 ${
         scrollTarget === "hero" ? "border-navBeforeOn" : "border-navAfterOn"
       } rounded justify-center items-center group`}
