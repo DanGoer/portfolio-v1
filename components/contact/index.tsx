@@ -51,7 +51,6 @@ function Contact({ handleSectionChange }: SectionChangeI) {
     <InView threshold={0.15} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id="contact" className="z-10 pt-48 pb-32">
-          <h2 className="pb-8 text-5xl text-fadeIn">{t("h2-contact")}</h2>
           <motion.form
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,6 +59,7 @@ function Contact({ handleSectionChange }: SectionChangeI) {
             onSubmit={handleSubmit}
             className="flex flex-col items-center justify-center max-w-sm gap-4 p-4 mx-auto shadow-lg md:p-12 rounded-xl bg-container"
           >
+            <SectionTitle title={t("h2-contact")} />
             <ContactSubTitle subtitle={t("h3-contact")} />
             <div className="relative w-full">
               <input

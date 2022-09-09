@@ -16,7 +16,7 @@ function HeroButton() {
       <motion.a
         aria-label="to the projects section"
         variants={item}
-        className="px-10 py-2 mt-2 mb-2 mr-2 text-lg font-medium text-center text-white duration-300 bg-gray-800 border-2 border-gray-800 rounded-full hover:bg-white hover:text-black"
+        className="w-56 px-10 py-2 mt-2 mb-2 mr-2 text-lg font-medium text-center text-black duration-300 bg-white border-2 border-gray-800 rounded-full hover:text-white hover:bg-gray-800"
       >
         {t("button-hero")}
       </motion.a>

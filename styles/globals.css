@@ -39,9 +39,6 @@
     transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
   }
 
-  p > strong {
-  }
-
   /* label and input settings end*/
 
   .next,

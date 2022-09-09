@@ -66,7 +66,19 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Reciper",
-    preview: ["neu.JPG", "port.jpg", "neu.JPG", "port.jpg", "port.jpg"],
+    preview: [
+      "foody-front.jpg",
+      "foody-mobile-front.jpg",
+      "foody-add.jpg",
+      "foody-mobile-add.jpg",
+      "foody-facts.jpg",
+      "foody-single.jpg",
+      "foody-recipes.jpg",
+      "foody-edit.jpg",
+      "foody-mobile-edit.jpg",
+      "foody-mobile-recipes.jpg",
+      "foody-auth.jpg",
+    ],
     livelink: "https://github.com/",
     github: "https://github.com/",
     techstack: [
