@@ -49,19 +49,6 @@ export const socialIconsList: SocialIconsI[] = [
 // content for projects
 export const projectContent: ProjectsI[] = [
   {
-    title: "Portfolio",
-    preview: ["neu.JPG", "portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
-    livelink: "https://github.com/",
-    github: "https://github.com/",
-    techstack: [
-      { name: "TypeScript", svg: "typescript.svg" },
-      { name: "Next.js", svg: "nextjs.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
-      { name: "i18next", svg: "i18next.svg" },
-      { name: "Framer Motion", svg: "motion.svg" },
-    ],
-  },
-  {
     title: "Photo Artist App",
     preview: ["port.jpg", "port.jpg"],
     livelink: "https://github.com/",
@@ -91,6 +78,19 @@ export const projectContent: ProjectsI[] = [
       { name: "Node.js", svg: "nodejs.svg" },
       { name: "Sequelize", svg: "sequelizejs.svg" },
       { name: "Express.js", svg: "express.svg" },
+      { name: "Framer Motion", svg: "motion.svg" },
+    ],
+  },
+  {
+    title: "Portfolio",
+    preview: ["neu.JPG", "portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
+    livelink: "https://github.com/",
+    github: "https://github.com/",
+    techstack: [
+      { name: "TypeScript", svg: "typescript.svg" },
+      { name: "Next.js", svg: "nextjs.svg" },
+      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "i18next", svg: "i18next.svg" },
       { name: "Framer Motion", svg: "motion.svg" },
     ],
   },
