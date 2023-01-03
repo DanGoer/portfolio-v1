@@ -15,15 +15,15 @@ function TechIcons() {
             transition={{ duration: 0.3, delay: 0.07 * index }}
             viewport={{ once: true }}
             key={icon.name}
-            className="block m-4 w-[70px] lg:w-[100px]"
+            className="block m-4 w-[70px] lg:w-[80px]"
           >
             <Image
               src={`/tech-icons/${icon.svg}`}
               alt="tech-icon"
               layout="responsive"
-              width={100}
-              height={100}
-              sizes="(min-width: 768px) 80px, 60px"
+              width={80}
+              height={80}
+              sizes="(min-width: 768px) 60px, 40px"
             />
             <h3 className="mt-2 text-base font-semibold lg:text-xl">
               {icon.name}

@@ -30,7 +30,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
       {({ ref }) => (
         <section ref={ref} id="hero" className="relative flex w-full h-screen">
           <motion.div
-            className="absolute flex flex-col text-left left-8 top-32 lg:left-[3%] md:top-[15%] "
+            className="absolute flex flex-col text-left left-8 top-32 lg:left-[2%] md:top-[30%]"
             initial="hidden"
             animate="visible"
             variants={container}
@@ -38,7 +38,7 @@ function Hero({ handleSectionChange }: SectionChangeI) {
             <HeroText />
             <motion.p
               variants={item}
-              className="text-2xl font-medium max-w-[320px] md:max-w-lg px-4 py-2 text-white rounded-md"
+              className="text-2xl font-medium max-w-[320px] md:max-w-lg py-2 text-white rounded-md"
             >
               {t("p-hero")}
             </motion.p>

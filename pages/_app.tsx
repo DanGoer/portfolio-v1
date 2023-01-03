@@ -8,10 +8,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Portfolio of D.G.</title>
+        <title>Portfolio from David Goergens</title>
         <link rel="icon" type="image/icon" sizes="16x16" href="/D.svg" />
-        <meta name="description" content="Webdev portfolio of D.G." />
-        <meta name="author" content="D.G." />
+        <meta name="description" content="Webdev portfolio of David Goergens" />
+        <meta name="author" content="David Goergens" />
       </Head>
       <Component {...pageProps} />
     </>
