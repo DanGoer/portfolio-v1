@@ -51,7 +51,7 @@ export const projectContent: ProjectsI[] = [
   {
     title: "Photo Artist App",
     preview: ["port.jpg", "port.jpg"],
-    livelink: "https://github.com/",
+    livelink: "https://www.artist.dangoer.de/",
     github: "https://github.com/DanGoer/mern-photo-artist-app",
     techstack: [
       { name: "JavaScript", svg: "javascript.svg" },
@@ -79,7 +79,7 @@ export const projectContent: ProjectsI[] = [
       "foody-mobile-recipes.jpg",
       "foody-auth.jpg",
     ],
-    livelink: "https://github.com/",
+    livelink: "https://www.reciper.dangoer.de/",
     github: "https://github.com/DanGoer/recipe-app",
     techstack: [
       { name: "JavaScript", svg: "javascript.svg" },
