@@ -50,7 +50,15 @@ export const socialIconsList: SocialIconsI[] = [
 export const projectContent: ProjectsI[] = [
   {
     title: "Photo Artist App",
-    preview: ["port.jpg", "port.jpg"],
+    preview: [
+      "blog-contact.png",
+      "blog-gallery.png",
+      "blog-impressum.png",
+      "blog-landing.png",
+      "blog-modal.png",
+      "blog-burger.png",
+      "blog-stories.png",
+    ],
     livelink: "https://www.artist.dangoer.de/",
     github: "https://github.com/DanGoer/mern-photo-artist-app",
     techstack: [
@@ -67,13 +75,10 @@ export const projectContent: ProjectsI[] = [
   {
     title: "Reciper",
     preview: [
-      "foody-front.jpg",
       "foody-mobile-front.jpg",
       "foody-add.jpg",
       "foody-mobile-add.jpg",
       "foody-facts.jpg",
-      "foody-single.jpg",
-      "foody-recipes.jpg",
       "foody-edit.jpg",
       "foody-mobile-edit.jpg",
       "foody-mobile-recipes.jpg",
@@ -113,6 +118,7 @@ export const projectContent: ProjectsI[] = [
       "weather-graph.jpg",
       "weather-nextdays.jpg",
       "weather-mobile.jpg",
+      "weather-impressum.png",
     ],
     livelink: "https://www.weather.dangoer.de/",
     github: "https://github.com/DanGoer/weather-app",
