@@ -100,7 +100,14 @@ export const projectContent: ProjectsI[] = [
   },
   {
     title: "Portfolio",
-    preview: ["neu.JPG", "portrait.jpg", "neu.JPG", "portrait.jpg", "neu.JPG"],
+    preview: [
+      "portfolio-landing.png",
+      "portfolio-landing-responsive.png",
+      "portfolio-aboutme.png",
+      "portfolio-aboutme-responsive.png",
+      "portfolio-contact.png",
+      "portfolio-impressum-responsive.png",
+    ],
     livelink: "https://www.dangoer.de/",
     github: "https://github.com/DanGoer/portfolio-v1",
     techstack: [
