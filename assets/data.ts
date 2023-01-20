@@ -12,7 +12,7 @@ export const techIcons = [
   { name: "React", svg: "react.svg" },
   { name: "Node.js", svg: "nodejs.svg" },
   { name: "Next.js", svg: "nextjs.svg" },
-  { name: "TailwindCSS", svg: "tailwindcss.svg" },
+  { name: "Tailwind", svg: "tailwindcss.svg" },
   { name: "Material-UI", svg: "material-ui.svg" },
   { name: "MongoDB", svg: "mongodb.svg" },
   { name: "Firebase", svg: "firebase.svg" },
@@ -64,7 +64,7 @@ export const projectContent: ProjectsI[] = [
     techstack: [
       { name: "JavaScript", svg: "javascript.svg" },
       { name: "React", svg: "react.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Tailwind", svg: "tailwindcss.svg" },
       { name: "Firebase", svg: "firebase.svg" },
       { name: "Node.js", svg: "nodejs.svg" },
       { name: "Express.js", svg: "express.svg" },
@@ -89,7 +89,7 @@ export const projectContent: ProjectsI[] = [
     techstack: [
       { name: "JavaScript", svg: "javascript.svg" },
       { name: "React", svg: "react.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Tailwind", svg: "tailwindcss.svg" },
       { name: "Firebase", svg: "firebase.svg" },
       { name: "MySQL", svg: "mysql.svg" },
       { name: "Node.js", svg: "nodejs.svg" },
@@ -113,7 +113,7 @@ export const projectContent: ProjectsI[] = [
     techstack: [
       { name: "TypeScript", svg: "typescript.svg" },
       { name: "Next.js", svg: "nextjs.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Tailwind", svg: "tailwindcss.svg" },
       { name: "i18next", svg: "i18next.svg" },
       { name: "Framer Motion", svg: "motion.svg" },
     ],
@@ -132,7 +132,7 @@ export const projectContent: ProjectsI[] = [
     techstack: [
       { name: "JavaScript", svg: "javascript.svg" },
       { name: "Next.js", svg: "nextjs.svg" },
-      { name: "TailwindCSS", svg: "tailwindcss.svg" },
+      { name: "Tailwind", svg: "tailwindcss.svg" },
       { name: "d3", svg: "d3.svg" },
     ],
   },
