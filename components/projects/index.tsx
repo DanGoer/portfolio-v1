@@ -35,7 +35,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
             .split("+")
             .map((text, index) => {
               return (
-                <article key={index}>
+                <article className="w-full h-full" key={index}>
                   <ProjectsTitle
                     livelink={projectContent[index].livelink}
                     title={projectContent[index].title}
@@ -45,7 +45,7 @@ function Projects({ handleSectionChange }: SectionChangeI) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className={`flex flex-col ${
+                    className={`flex flex-col h-full w-full ${
                       index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
                     } gap-4 bg-container text-containerOn shadow-lg rounded-xl border-solid p-2 lg:p-8 z-10`}
                   >
